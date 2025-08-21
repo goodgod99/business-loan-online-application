@@ -30,10 +30,13 @@
                             <div class="form-group">
                                 <label for="companyNumber">公司統編</label>
                                 <input type="text" id="companyNumber" name="companyNumber" required>
+                                <small class="form-err-hint">請輸入8位數字</small>
+
                             </div>
                             <div class="form-group">
                                 <label for="companyName">公司名稱</label>
                                 <input type="text" id="companyName" name="companyName" required>
+
                             </div>
                         </div>
 
@@ -41,10 +44,12 @@
                             <div class="form-group">
                                 <label for="representativeName">負責人姓名</label>
                                 <input type="text" id="representativeName" name="representativeName" required>
+                                <small class="form-err-hint">請輸入正確姓名</small>
                             </div>
                             <div class="form-group">
                                 <label for="representativeId">負責人身份證字號</label>
                                 <input type="text" id="representativeId" name="representativeId" required>
+                                <small class="form-err-hint">請輸入正確身分證字號（限本國人）</small>
                             </div>
                         </div>
 
@@ -58,12 +63,12 @@
                                     </select>
                                     <span>年</span>
                                     <select id="birthMonth" name="birthMonth" required>
-                                        <option value="">月</option>
+                                        <option value=""></option>
                                         <!-- 1-12月 -->
                                     </select>
                                     <span>月</span>
                                     <select id="birthDay" name="birthDay" required>
-                                        <option value="">日</option>
+                                        <option value=""></option>
                                         <!-- 1-31日 -->
                                     </select>
                                     <span>日</span>
@@ -76,28 +81,32 @@
                             </div>
                         </div>
 
-                        <div class="captcha-section">
-                            <label for="captcha">請輸入圖形驗證碼</label>
-                            <div class="captcha-input">
-                                <input type="text" id="captcha" name="captcha" required>
-                                <img src="assets/img/captcha.png" alt="驗證碼" class="captcha-image">
-                                <button type="button" class="captcha-refresh">換圖</button>
+                        <div class="form-row">
+                            <div class="checkbox-section">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="agree1" name="agreements" required>
+                                    <label for="agree1">本人已閱讀並同意<a href="#" class="link">GB2B全球數位企金網路服務條款</a></label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="agree2" name="agreements" required>
+                                    <label for="agree2">本人已閱讀並同意<a href="#" class="link">申請企業貸款</a>的定事項</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="agree3" name="agreements" required>
+                                    <label for="agree3">本人已閱讀並同意<a href="#" class="link">個人資料保護法之法定公告事項</a></label>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="checkbox-section">
-                            <div class="checkbox-group">
-                                <input type="checkbox" id="agree1" name="agreements" required>
-                                <label for="agree1">本人已閱讀並同意<a href="#" class="link">GB2B全球數位企金網路服務條款</a></label>
+                            <div class="form-group captcha-section">
+                                <div class="captcha-input">
+                                    <label for="captcha">請輸入圖形驗證碼</label>
+                                    <input type="text" id="captcha" name="captcha" required>
+                                    <img src="assets/img/captcha.png" alt="驗證碼" class="captcha-image">
+                                    <button type="button" class="captcha-refresh">換圖</button>
+                                </div>
                             </div>
-                            <div class="checkbox-group">
-                                <input type="checkbox" id="agree2" name="agreements" required>
-                                <label for="agree2">本人已閱讀並同意<a href="#" class="link">申請企業貸款</a>的定事項</label>
-                            </div>
-                            <div class="checkbox-group">
-                                <input type="checkbox" id="agree3" name="agreements" required>
-                                <label for="agree3">本人已閱讀並同意<a href="#" class="link">個人資料保護法之法定公告事項</a></label>
-                            </div>
+
+
                         </div>
 
                         <button type="submit" class="submit-btn">下一步</button>
