@@ -1,0 +1,9 @@
+/* 主檔案 */
+
+@import 'variables';  // 變數檔案
+@import 'mixins';     // mixins 檔案
+@import 'reset';      // CSS reset
+@import 'layout';     // 佈局樣式
+
+// Import pages
+@import 'pages/index'; // 如果有首頁特定樣式

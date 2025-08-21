@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商金獨資戶線上進件 - 台新銀行</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="assets/img/Logo.png" alt="台新銀行">
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="background-container">
+
+            <!-- Application Form -->
+            <div class="form-container">
+                <div class="form-card">
+                    <h1 class="form-title">開始線上申請企業飛速貸吧！</h1>
+
+                    <form class="application-form" id="businessLoanForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="companyNumber">公司統編</label>
+                                <input type="text" id="companyNumber" name="companyNumber" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="companyName">公司名稱</label>
+                                <input type="text" id="companyName" name="companyName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="representativeName">負責人姓名</label>
+                                <input type="text" id="representativeName" name="representativeName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="representativeId">負責人身份證字號</label>
+                                <input type="text" id="representativeId" name="representativeId" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group date-group">
+                                <label for="birthDate">負責人生日</label>
+                                <div class="date-inputs">
+                                    <select id="birthYear" name="birthYear" required>
+                                        <option value="">民國</option>
+                                        <!-- 動態生成年份選項 -->
+                                    </select>
+                                    <span>年</span>
+                                    <select id="birthMonth" name="birthMonth" required>
+                                        <option value="">月</option>
+                                        <!-- 1-12月 -->
+                                    </select>
+                                    <span>月</span>
+                                    <select id="birthDay" name="birthDay" required>
+                                        <option value="">日</option>
+                                        <!-- 1-31日 -->
+                                    </select>
+                                    <span>日</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="businessNumber">營業人員編</label>
+                                <input type="text" id="businessNumber" name="businessNumber">
+                                <small class="form-hint">如有請填寫營業稅統一發票專用編</small>
+                            </div>
+                        </div>
+
+                        <div class="captcha-section">
+                            <label for="captcha">請輸入圖形驗證碼</label>
+                            <div class="captcha-input">
+                                <input type="text" id="captcha" name="captcha" required>
+                                <img src="assets/img/captcha.png" alt="驗證碼" class="captcha-image">
+                                <button type="button" class="captcha-refresh">換圖</button>
+                            </div>
+                        </div>
+
+                        <div class="checkbox-section">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="agree1" name="agreements" required>
+                                <label for="agree1">本人已閱讀並同意<a href="#" class="link">GB2B全球數位企金網路服務條款</a></label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="agree2" name="agreements" required>
+                                <label for="agree2">本人已閱讀並同意<a href="#" class="link">申請企業貸款</a>的定事項</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="agree3" name="agreements" required>
+                                <label for="agree3">本人已閱讀並同意<a href="#" class="link">個人資料保護法之法定公告事項</a></label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">下一步</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>© 台新國際商業銀行 Copyright Taishin International Bank. All Rights Reserved.</p>
+            </div>
+            <div class="footer-logo">
+                <img src="assets/img/footer Logo.png" alt="台新新光金控">
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
