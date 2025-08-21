@@ -61,6 +61,50 @@ h1 {
   margin-bottom: 20px;
 }
 
+.form-subtitle {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+span.red-color {
+  color: #D70D18;
+}
+
+.readonly-input {
+  background-color: #f2f6f7 !important;
+  color: #888888;
+  cursor: not-allowed;
+}
+
+.form-card {
+  width: 550px;
+  margin: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.form-group {
+  flex: 1;
+}
 .form-group label {
   display: inline-block;
   color: #000000;
@@ -69,7 +113,8 @@ h1 {
   transform: translateY(50%) translateX(12px);
   background-color: rgba(255, 255, 255, 0.8);
 }
-.form-group input[type=text] {
+.form-group input[type=text],
+.form-group [type=password] {
   width: 100%;
   padding: 12px 15px;
   border: 1px solid #EDEDED;
@@ -79,33 +124,201 @@ h1 {
   box-sizing: border-box;
   background: #ffffff;
 }
-.form-group input[type=text]:focus {
+.form-group input[type=text]:focus,
+.form-group [type=password]:focus {
   outline: none;
   border-color: #D70D18;
   background: #ffffff;
 }
-.form-group input[type=text]::-moz-placeholder {
+.form-group input[type=text]::-moz-placeholder, .form-group [type=password]::-moz-placeholder {
   color: #888888;
 }
-.form-group input[type=text]::placeholder {
+.form-group input[type=text]::placeholder,
+.form-group [type=password]::placeholder {
   color: #888888;
 }
-
-.form-hint {
+.form-group .form-hint {
   font-size: 12px;
   color: #888888;
   margin-top: 5px;
   margin-left: 10px;
   line-height: 1.4;
+  display: block;
 }
-
-.form-err-hint {
+.form-group .form-err-hint {
   font-size: 12px;
   color: #D70D18;
   margin-top: 5px;
   margin-left: 10px;
   line-height: 1.4;
   display: none;
+}
+
+.checkbox-section {
+  flex: 1;
+}
+.checkbox-section .checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+.checkbox-section .checkbox-group input[type=checkbox] {
+  margin-right: 10px;
+  margin-top: 2px;
+  transform: scale(1.1);
+  accent-color: #D70D18;
+}
+.checkbox-section .checkbox-group label {
+  flex: 1;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #000000;
+  cursor: pointer;
+}
+.checkbox-section .checkbox-group label a {
+  color: #D70D18;
+  text-decoration: none;
+}
+.checkbox-section .checkbox-group label a:hover {
+  text-decoration: underline;
+}
+
+.captcha-section {
+  position: relative;
+  margin: 0 auto;
+  max-width: 450px;
+}
+.captcha-section .captcha-input {
+  position: relative;
+  display: block;
+}
+.captcha-section .captcha-input .captcha-image {
+  position: absolute;
+  right: 60px;
+  top: 28px;
+  /*             top: 65%;
+  transform: translateY(-50%); */
+  height: 18px;
+  width: auto;
+  border-radius: 4px;
+}
+.captcha-section .captcha-input .captcha-refresh {
+  position: absolute;
+  right: 0px;
+  top: 20px;
+  /*             top: 65%;
+  transform: translateY(-50%); */
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 14px;
+  color: #888888;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 5px;
+}
+.captcha-section .captcha-input .captcha-refresh::after {
+  content: "⟳";
+  font-size: 20px;
+  margin-left: 3px;
+}
+
+.btn {
+  width: 230px;
+  height: 50px;
+  background: #D70D18;
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: auto;
+  display: block;
+}
+.btn:hover {
+  background: #AC0108;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.button-group .btn {
+  display: inline-block;
+}
+.button-group .gray-btn {
+  background: #d9d9d9 !important;
+  color: #000000 !important;
+}
+.button-group .gray-btn:hover {
+  background: #888888 !important;
+}
+
+.verification-fail-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.verification-fail-content .fail-illustration img {
+  width: 150px;
+}
+.verification-fail-content .error-message p {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.custom-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.custom-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  padding: 12px 40px 12px 15px;
+  border: 1px solid #EDEDED;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #ffffff;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.custom-select select:focus {
+  outline: none;
+  border-color: #D70D18;
+}
+.custom-select select:invalid {
+  color: #999;
+}
+.custom-select select option {
+  color: #333;
+  background: #ffffff;
+  padding: 8px 12px;
+}
+.custom-select::after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 35px;
+  /*             top: 50%;
+      transform: translateY(-50%); */
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #888888;
+  pointer-events: none;
 }
 
 /* 佈局樣式 */
@@ -186,30 +399,7 @@ main .background-container .form-container {
   justify-content: center;
 }
 
-.form-card {
-  width: 500px;
-  margin: 50px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
-  position: relative;
-}
-.form-card .form-row {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-.form-card .form-row .form-group {
-  flex: 1;
-}
-@media (max-width: 768px) {
-  .form-card .form-row {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
-.form-card .date-group .date-inputs {
+#stareLoanForm .date-group .date-inputs {
   width: 100%;
   border: 1px solid #EDEDED;
   border-radius: 8px;
@@ -224,99 +414,16 @@ main .background-container .form-container {
   gap: 8px;
   color: #888888;
 }
-.form-card .date-group .date-inputs:focus-within {
+#stareLoanForm .date-group .date-inputs:focus-within {
   outline: none;
   border-color: #D70D18;
   background: #ffffff;
 }
-.form-card .date-group .date-inputs select {
+#stareLoanForm .date-group .date-inputs select {
   flex: 1;
   outline: none;
   border: none;
   color: #888888;
-}
-.form-card .checkbox-section {
-  flex: 1;
-}
-.form-card .checkbox-section .checkbox-group {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 12px;
-}
-.form-card .checkbox-section .checkbox-group input[type=checkbox] {
-  margin-right: 10px;
-  margin-top: 2px;
-  transform: scale(1.1);
-  accent-color: #D70D18;
-}
-.form-card .checkbox-section .checkbox-group label {
-  flex: 1;
-  font-size: 13px;
-  line-height: 1.5;
-  color: #000000;
-  cursor: pointer;
-}
-.form-card .checkbox-section .checkbox-group label a {
-  color: #D70D18;
-  text-decoration: none;
-}
-.form-card .checkbox-section .checkbox-group label a:hover {
-  text-decoration: underline;
-}
-.form-card .captcha-section {
-  position: relative;
-}
-.form-card .captcha-section .captcha-input {
-  position: relative;
-  display: block;
-}
-.form-card .captcha-section .captcha-input .captcha-image {
-  position: absolute;
-  right: 60px;
-  top: 65%;
-  transform: translateY(-50%);
-  height: 18px;
-  width: auto;
-  border-radius: 4px;
-}
-.form-card .captcha-section .captcha-input .captcha-refresh {
-  position: absolute;
-  right: 0px;
-  top: 65%;
-  transform: translateY(-50%);
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-  font-size: 14px;
-  color: #888888;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 3px;
-  padding: 5px;
-}
-.form-card .captcha-section .captcha-input .captcha-refresh::after {
-  content: "⟳";
-  font-size: 20px;
-  margin-left: 3px;
-}
-.form-card .submit-btn {
-  width: 230px;
-  height: 50px;
-  background: #D70D18;
-  color: #ffffff;
-  border: none;
-  padding: 15px 30px;
-  border-radius: 25px;
-  font-size: 16px;
-  font-weight: 400;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin: auto;
-  display: block;
-}
-.form-card .submit-btn:hover {
-  background: #AC0108;
 }
 
 /* 
@@ -365,4 +472,60 @@ main .background-container .form-container {
             font-size: 15px;
         }
     }
-} *//*# sourceMappingURL=main.css.map */
+} */
+#companyVerificationForm .computer-icon {
+  margin-bottom: 20px;
+}
+#companyVerificationForm .computer-icon img {
+  max-width: 400px;
+  margin: auto;
+  display: block;
+}
+
+.verification-fail-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.verification-fail-content .fail-illustration img {
+  width: 150px;
+}
+.verification-fail-content .error-message p {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.id-card-upload .example-images img {
+  width: 100%;
+  height: auto;
+}
+.id-card-upload .upload-section .upload-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.id-card-upload .upload-section .upload-row .upload-area {
+  width: 48%;
+  height: 200px;
+  border: 2px dashed #EDEDED;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.id-card-upload .upload-section .upload-row .upload-area img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.password-memo p {
+  flex: 1;
+  display: block;
+  font-size: 12px;
+  line-height: 1.4;
+}/*# sourceMappingURL=main.css.map */

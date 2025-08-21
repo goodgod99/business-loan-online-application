@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>申請新用戶 - 台新銀行</title>
+    <link rel="stylesheet" href="../assets/scss/main.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="../assets/img/Logo.png" alt="台新銀行">
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="background-container">
+
+            <!-- Application Form -->
+            <div class="form-container">
+                <div class="form-card">
+                    <h1 class="form-title">您好，經查您尚未成為本行往來戶</h1>
+                    <p class="form-subtitle">請提供您於其他銀行所開立之帳戶資料(限臨櫃開戶之台幣帳戶)聯絡資料，本行確認無誤後，即可繼續進行後續流程。</p>
+
+                    <form class="application-form" id="bankCustomerOnboardingForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="representativeIdNumber">負責人身份證字號</label>
+                                <input type="text" class="readonly-input" id="representativeIdNumber"
+                                    name="representativeIdNumber" value="O12345678" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="representativeBirthday">負責人生日</label>
+                                <input type="text" class="readonly-input" id="representativeBirthday"
+                                    name="representativeBirthday" value="808" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <div class="custom-select">
+                                    <label for="otherBankCode">他行銀行代碼</label>
+                                    <select id="otherBankCode" name="otherBankCode" required>
+                                        <option value="" disabled selected>銀行代碼</option>
+                                        <option value="004">台灣銀行</option>
+                                        <option value="005">土地銀行</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="otherBankAccountNumber">他行銀行帳號</label>
+                                <input type="text" id="otherBankAccountNumber" name="otherBankAccountNumber" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phoneNumberAtBank">留存於上述銀行手機號碼</label>
+                                <input type="text" id="phoneNumberAtBank" name="phoneNumberAtBank" required>
+                            </div>
+                            <div class="form-group">
+                            </div>
+                        </div>
+
+
+                        <!-- 按鈕區域 -->
+                        <div class="button-group">
+                            <button type="submit" class="btn">下一步</button>
+                            <button type="button" class="btn">專人聯絡</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>© 台新國際商業銀行 Copyright Taishin International Bank. All Rights Reserved.</p>
+            </div>
+            <div class="footer-logo">
+                <img src="../assets/img/footer Logo.png" alt="台新新光金控">
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

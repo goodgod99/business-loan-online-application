@@ -1,41 +1,4 @@
-
-#stareLoanForm{
-
-    // 日期選擇區域
-    .date-group {
-        .date-inputs {
-            width: 100%;
-            border: 1px solid $gray-light;
-            border-radius: 8px;
-            font-size: 14px;
-            box-sizing: border-box;
-            background: $white;
-            padding: 12px 15px;
-            height: 42px;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: $gray-dark;
-
-            &:focus-within {
-                outline: none;
-                border-color: $primary-red;
-                background: $white;
-            }
-
-            select {
-                flex: 1;
-                outline: none;
-                border: none;
-                color: $gray-dark;
-            }
-        }
-    }
-
-    
-}
-
+@charset "UTF-8";
 /* 
 // 手機版響應式調整
 @media (max-width: 600px) {
@@ -82,4 +45,4 @@
             font-size: 15px;
         }
     }
-} */
+} *//*# sourceMappingURL=index.css.map */

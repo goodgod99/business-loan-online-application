@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>進行公司身份驗證 - 台新銀行</title>
+    <link rel="stylesheet" href="../assets/scss/main.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="../assets/img/Logo.png" alt="台新銀行">
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="background-container">
+
+            <!-- Company Verification Form -->
+            <div class="form-container">
+                <div class="form-card">
+                    <h1 class="form-title">進行公司身分驗證</h1>
+                    <p class="form-subtitle">請將證卡傳送雙邊的電腦，如無工商憑證，請黏專人聯絡。</p>
+
+                    <form class="application-form" id="companyVerificationForm">
+
+                        <!-- 憑證插入說明區域 -->
+                        <div class="computer-icon">
+                            <img src="../assets/img/computer.png" alt="電腦">
+                        </div>
+
+                        <!-- 同意條款 -->
+                        <div class="checkbox-section">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="companyAgree" name="companyAgree" required>
+                                <label for="companyAgree">
+                                    本人已閱讀並同意<a href="#"
+                                        class="link">企業保證書</a>(介接驗證取得銀行證資料、公司資料、營業租申報資料、營業稅憑定義報表定資料、營利事業所得稅申報資料、執行業務所得結算資料)，並已詳閱<a
+                                        href="#" class="link">中小企業融資服務平台蒐集個人資料告知事項</a>暨個人資料提供同意書。
+                                </label>
+                            </div>
+                        </div>
+
+
+                        <div class="form-row">
+                            <!-- 工商憑證 PIN 碼輸入 -->
+                            <div class="form-group">
+                                <label for="businessPin">請輸入工商憑證PIN碼</label>
+                                <input type="password" id="businessPin" name="businessPin" placeholder="商形驗證碼" required>
+                            </div>
+                            <!-- 驗證碼區域 -->
+                            <div class="form-group captcha-section">
+                                <div class="captcha-input">
+                                    <label for="captcha">請輸入圖形驗證碼</label>
+                                    <input type="text" id="captcha" name="captcha" required>
+                                    <img src="../assets/img/captcha.png" alt="驗證碼" class="captcha-image">
+                                    <button type="button" class="captcha-refresh">換圖</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- 按鈕區域 -->
+                        <div class="button-group">
+                            <button type="submit" class="btn">下一步</button>
+                            <button type="button" class="btn">專人聯絡</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>© 台新國際商業銀行 Copyright Taishin International Bank. All Rights Reserved.</p>
+            </div>
+            <div class="footer-logo">
+                <img src="../assets/img/footer Logo.png" alt="台新新光金控">
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

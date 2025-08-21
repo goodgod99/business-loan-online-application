@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>申請金融憑證 - 台新銀行</title>
+    <link rel="stylesheet" href="../assets/scss/main.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="../assets/img/Logo.png" alt="台新銀行">
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="background-container">
+
+            <!-- Company Verification Form -->
+            <div class="form-container">
+                <div class="form-card">
+                    <h1 class="form-title">申請金融憑證</h1>
+                    <p class="form-subtitle">申請台新軟體憑證，本行將透過聯徵中心查詢中小企業融資平台，加速案件審理。 </p>
+
+                    <div class="verification-fail-content">
+                        <div class="fail-illustration">
+                            <img src="../assets/img/computer_security.png" alt="申請金融憑證">
+                        </div>
+                        <!-- 勾選筐 -->
+                        <div class="checkbox-section">
+                            <div class="checkbox-group">
+                                <input type="checkbox" name="agreements" required>
+                                <label for="agree1">本人已詳閱<a href="#"
+                                        class="link">台新國際商業銀行商務XML憑證申請與使用約定條款</a>，並同意遵守相關約定事項。</label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="certificatePassword">設定憑證密碼</label>
+                            <input type="password" id="certificatePassword" name="certificatePassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmCertificatePassword">請再次輸入密碼</label>
+                            <input type="password" id="confirmCertificatePassword" name="confirmCertificatePassword"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="password-memo form-row">
+                        <p>1.設定長度為6-12為英數字組合(英文字大小寫視為不同)<br>
+                            2.不可設定特殊符號或空白<br>
+                            3.不可與身分證字號/統一證號類似或相同</p>
+                        <p>4.請使用半形之英數字設定<br>
+                            5.若您使用不同瀏覽器進行交易時，需重新申請本行金融憑證</p>
+
+                    </div>
+
+                    <!-- 按鈕區域 -->
+                    <div class="button-group">
+                        <button type="button" class="btn gray-btn">取消申請憑證</button>
+                        <button type="submit" class="btn">確定申請憑證</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>© 台新國際商業銀行 Copyright Taishin International Bank. All Rights Reserved.</p>
+            </div>
+            <div class="footer-logo">
+                <img src="../assets/img/footer Logo.png" alt="台新新光金控">
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+.id-card-upload{
+    .example-images{
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .upload-section{
+        .upload-row{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+
+            .upload-area{
+                width: 48%;
+                height: 200px;
+                border: 2px dashed $gray-light;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba($white, 0.8);
+                
+                img{
+                    max-width: 100%;
+                    max-height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}

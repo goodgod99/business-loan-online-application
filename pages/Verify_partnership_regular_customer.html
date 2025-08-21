@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>請輸入驗證碼 - 台新銀行</title>
+    <link rel="stylesheet" href="../assets/scss/main.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="../assets/img/Logo.png" alt="台新銀行">
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="background-container">
+
+            <!-- Company Verification Form -->
+            <div class="form-container">
+                <div class="form-card">
+                    <h1 class="form-title">請輸入驗證碼</h1>
+                    <p class="form-subtitle">系統會在2分鐘內寄送驗證碼至負責人信用卡正卡持有人原留之手機及Email</p>
+
+                    <div class="verification-fail-content">
+                        <div class="fail-illustration">
+                            <img src="../assets/img/phone&pass.png" alt="驗證碼">
+                        </div>
+                        <!-- 驗證碼資訊 -->
+                        <div class="error-message">
+                            <p>驗證碼已發送至</p>
+                            <p><span class="red-color">****-**2-060</span></p>
+                            <p>和<span class="red-color">******7@gmail.com</span></p>
+                        </div>
+                    </div>
+
+                    <div class="form-group captcha-section">
+                        <div class="captcha-input">
+                            <label for="captcha">請輸入圖形驗證碼</label>
+                            <input type="text" id="captcha" name="captcha" required>
+                            <button type="button" class="captcha-refresh">重新發送驗證碼(<span
+                                    class="red-color">95</span>)</button>
+                            <small class="form-hint">若2分鐘內沒有收到驗證碼資訊，請重新點擊重發驗證碼驗證碼2分鐘內有效</small>
+
+                        </div>
+                    </div>
+
+                    <!-- 按鈕區域 -->
+                    <div class="button-group">
+                        <button type="button" class="btn">專人聯絡</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>© 台新國際商業銀行 Copyright Taishin International Bank. All Rights Reserved.</p>
+            </div>
+            <div class="footer-logo">
+                <img src="../assets/img/footer Logo.png" alt="台新新光金控">
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
