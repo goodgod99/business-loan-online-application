@@ -1,0 +1,368 @@
+@charset "UTF-8";
+/* 主檔案 */
+/* Meyer Reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 存放所有變數 */
+/* 存放可重複使用的程式碼片段 */
+h1 {
+  color: #D70D18;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: inline-block;
+  color: #000000;
+  font-weight: 500;
+  font-size: 12px;
+  transform: translateY(50%) translateX(12px);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.form-group input[type=text] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #EDEDED;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+.form-group input[type=text]:focus {
+  outline: none;
+  border-color: #D70D18;
+  background: #ffffff;
+}
+.form-group input[type=text]::-moz-placeholder {
+  color: #888888;
+}
+.form-group input[type=text]::placeholder {
+  color: #888888;
+}
+
+.form-hint {
+  font-size: 12px;
+  color: #888888;
+  margin-top: 5px;
+  margin-left: 10px;
+  line-height: 1.4;
+}
+
+.form-err-hint {
+  font-size: 12px;
+  color: #D70D18;
+  margin-top: 5px;
+  margin-left: 10px;
+  line-height: 1.4;
+  display: none;
+}
+
+/* 佈局樣式 */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #D70D18;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+header .logo {
+  padding: 0 100px;
+}
+header .logo img {
+  height: 20px;
+  width: auto;
+}
+
+footer {
+  height: 56px;
+  width: 100%;
+}
+footer .footer-content {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+footer .footer-content .footer-text {
+  width: 60%;
+  height: 100%;
+  background-color: #D70D18;
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+}
+footer .footer-content .footer-text p {
+  color: #ffffff;
+  font-size: 14px;
+}
+footer .footer-content .footer-logo {
+  width: 40%;
+  height: 100%;
+  background-color: #d9d9d9;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+footer .footer-content .footer-logo img {
+  height: 20px;
+  width: auto;
+}
+
+main .background-container {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/BG 1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  position: relative;
+}
+main .background-container .form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-card {
+  width: 500px;
+  margin: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.form-card .form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.form-card .form-row .form-group {
+  flex: 1;
+}
+@media (max-width: 768px) {
+  .form-card .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+.form-card .date-group .date-inputs {
+  width: 100%;
+  border: 1px solid #EDEDED;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background: #ffffff;
+  padding: 12px 15px;
+  height: 42px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #888888;
+}
+.form-card .date-group .date-inputs:focus-within {
+  outline: none;
+  border-color: #D70D18;
+  background: #ffffff;
+}
+.form-card .date-group .date-inputs select {
+  flex: 1;
+  outline: none;
+  border: none;
+  color: #888888;
+}
+.form-card .checkbox-section {
+  flex: 1;
+}
+.form-card .checkbox-section .checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+.form-card .checkbox-section .checkbox-group input[type=checkbox] {
+  margin-right: 10px;
+  margin-top: 2px;
+  transform: scale(1.1);
+  accent-color: #D70D18;
+}
+.form-card .checkbox-section .checkbox-group label {
+  flex: 1;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #000000;
+  cursor: pointer;
+}
+.form-card .checkbox-section .checkbox-group label a {
+  color: #D70D18;
+  text-decoration: none;
+}
+.form-card .checkbox-section .checkbox-group label a:hover {
+  text-decoration: underline;
+}
+.form-card .captcha-section {
+  position: relative;
+}
+.form-card .captcha-section .captcha-input {
+  position: relative;
+  display: block;
+}
+.form-card .captcha-section .captcha-input .captcha-image {
+  position: absolute;
+  right: 60px;
+  top: 65%;
+  transform: translateY(-50%);
+  height: 18px;
+  width: auto;
+  border-radius: 4px;
+}
+.form-card .captcha-section .captcha-input .captcha-refresh {
+  position: absolute;
+  right: 0px;
+  top: 65%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 14px;
+  color: #888888;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 5px;
+}
+.form-card .captcha-section .captcha-input .captcha-refresh::after {
+  content: "⟳";
+  font-size: 20px;
+  margin-left: 3px;
+}
+.form-card .submit-btn {
+  width: 230px;
+  height: 50px;
+  background: #D70D18;
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: auto;
+  display: block;
+}
+.form-card .submit-btn:hover {
+  background: #AC0108;
+}
+
+/* 
+// 手機版響應式調整
+@media (max-width: 600px) {
+    .form-card {
+        width: 90%;
+        margin: 20px auto;
+        padding: 30px 25px;
+
+        .captcha-input {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 10px;
+
+            .captcha-image {
+                align-self: center;
+            }
+        }
+
+        .date-inputs {
+            flex-wrap: wrap;
+            gap: 5px;
+
+            select {
+                flex: 1;
+                min-width: 60px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .form-card {
+        width: 95%;
+        margin: 10px auto;
+        padding: 25px 20px;
+
+        .form-title {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .submit-btn {
+            padding: 12px 25px;
+            font-size: 15px;
+        }
+    }
+} *//*# sourceMappingURL=main.css.map */
