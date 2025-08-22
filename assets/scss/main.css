@@ -74,6 +74,11 @@ span.red-color {
   color: #D70D18;
 }
 
+.err_flag {
+  display: inline-block !important;
+  border-color: #D70D18 !important;
+}
+
 .readonly-input {
   background-color: #f2f6f7 !important;
   color: #888888;
@@ -526,6 +531,6 @@ main .background-container .form-container {
 .password-memo p {
   flex: 1;
   display: block;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 1.4;
 }/*# sourceMappingURL=main.css.map */

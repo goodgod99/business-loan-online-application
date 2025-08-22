@@ -24,6 +24,12 @@ span.red-color {
     color: $primary-red;
 }
 
+// 錯誤輸入樣式
+.err_flag {
+    display: inline-block !important;
+    border-color: $primary-red !important;
+}
+
 // 唯讀輸入框
 .readonly-input {
     background-color: #f2f6f7 !important;
@@ -263,12 +269,12 @@ span.red-color {
     width: 100%;
 
     select {
-        appearance: none; 
+        appearance: none;
         -webkit-appearance: none;
         -moz-appearance: none;
 
         width: 100%;
-        padding: 12px 40px 12px 15px; 
+        padding: 12px 40px 12px 15px;
         border: 1px solid $gray-light;
         border-radius: 8px;
         font-size: 14px;
@@ -311,4 +317,3 @@ span.red-color {
     }
 
 }
-
