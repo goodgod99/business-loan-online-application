@@ -132,7 +132,7 @@ span.red-color {
 .form-group input[type=text]:focus,
 .form-group [type=password]:focus {
   outline: none;
-  border-color: #D70D18;
+  border-color: #888888;
   background: #ffffff;
 }
 .form-group input[type=text]::-moz-placeholder, .form-group [type=password]::-moz-placeholder {
@@ -193,6 +193,12 @@ span.red-color {
   margin: 0 auto;
   max-width: 450px;
 }
+@media (max-width: 768px) {
+  .captcha-section {
+    margin: 0;
+    max-width: none;
+  }
+}
 .captcha-section .captcha-input {
   position: relative;
   display: block;
@@ -225,9 +231,17 @@ span.red-color {
   padding: 5px;
 }
 .captcha-section .captcha-input .captcha-refresh::after {
-  content: "⟳";
+  /* content: '⟳';
   font-size: 20px;
-  margin-left: 3px;
+  margin-left: 3px; */
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/Button_renew.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: inline-block;
 }
 
 .btn {
@@ -301,7 +315,7 @@ span.red-color {
 }
 .custom-select select:focus {
   outline: none;
-  border-color: #D70D18;
+  border-color: #888888;
 }
 .custom-select select:invalid {
   color: #999;
@@ -421,7 +435,7 @@ main .background-container .form-container {
 }
 #stareLoanForm .date-group .date-inputs:focus-within {
   outline: none;
-  border-color: #D70D18;
+  border-color: #888888;
   background: #ffffff;
 }
 #stareLoanForm .date-group .date-inputs select {
@@ -510,22 +524,28 @@ main .background-container .form-container {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+  gap: 20px;
 }
 .id-card-upload .upload-section .upload-row .upload-area {
-  width: 48%;
-  height: 200px;
-  border: 2px dashed #EDEDED;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.8);
+  width: 300px;
+  height: 190px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-.id-card-upload .upload-section .upload-row .upload-area img {
-  max-width: 100%;
-  max-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+.id-card-upload .upload-section .upload-row .upload-area_1 {
+  background-image: url("../img/Upload_ID_1.png");
+}
+.id-card-upload .upload-section .upload-row .upload-area_1:hover {
+  background-image: url("../img/Upload_ID_1_hover.png");
+}
+.id-card-upload .upload-section .upload-row .upload-area_2 {
+  background-image: url("../img/Upload_ID_2.png");
+}
+.id-card-upload .upload-section .upload-row .upload-area_2:hover {
+  background-image: url("../img/Upload_ID_2_hover.png");
 }
 
 .password-memo p {
@@ -533,4 +553,32 @@ main .background-container .form-container {
   display: block;
   font-size: 10px;
   line-height: 1.4;
+}
+
+.form-group {
+  position: relative;
+}
+.form-group .password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+.form-group .password-toggle::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/Button_Hide.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: opacity 0.3s ease;
 }/*# sourceMappingURL=main.css.map */

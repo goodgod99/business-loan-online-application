@@ -45,11 +45,16 @@
                         <div class="form-group">
                             <label for="certificatePassword">設定憑證密碼</label>
                             <input type="password" id="certificatePassword" name="certificatePassword" required>
+                            <button type="button" class="password-toggle"
+                                onclick="togglePassword('certificatePassword')"></button>
+
                         </div>
                         <div class="form-group">
                             <label for="confirmCertificatePassword">請再次輸入密碼</label>
                             <input type="password" id="confirmCertificatePassword" name="confirmCertificatePassword"
                                 required>
+                            <button type="button" class="password-toggle"
+                                onclick="togglePassword('confirmCertificatePassword')"></button>
                         </div>
                     </div>
 
@@ -84,7 +89,8 @@
         </div>
     </footer>
 
-    <script src="../assets/js/main.js"></script>
+    <!-- JavaScript -->
+    <!-- <script src="../assets/js/toggle-password.js"></script> -->
 </body>
 
 </html>

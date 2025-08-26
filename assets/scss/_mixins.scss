@@ -86,7 +86,7 @@ span.red-color {
 
         &:focus {
             outline: none;
-            border-color: $primary-red;
+            border-color: $gray-dark;
             background: $white;
         }
 
@@ -157,6 +157,11 @@ span.red-color {
     margin: 0 auto;
     max-width: 450px;
 
+    @media (max-width: $mobile) {
+        margin: 0;
+        max-width: none;
+    }
+
     .captcha-input {
         position: relative;
         display: block;
@@ -190,9 +195,17 @@ span.red-color {
             padding: 5px;
 
             &::after {
-                content: '⟳';
+                /* content: '⟳';
                 font-size: 20px;
-                margin-left: 3px;
+                margin-left: 3px; */
+                content: '';
+                width: 15px;
+                height: 15px;
+                background-image: url("../img/Button_renew.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                display: inline-block;
             }
         }
     }
@@ -285,7 +298,7 @@ span.red-color {
 
         &:focus {
             outline: none;
-            border-color: $primary-red;
+            border-color: $gray-dark;
         }
 
         // placeholder 樣式

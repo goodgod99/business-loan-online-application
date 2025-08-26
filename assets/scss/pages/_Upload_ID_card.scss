@@ -1,30 +1,42 @@
-.id-card-upload{
-    .example-images{
-        img{
+.id-card-upload {
+    .example-images {
+        img {
             width: 100%;
             height: auto;
         }
     }
-    .upload-section{
-        .upload-row{
+
+    .upload-section {
+        .upload-row {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
+            gap: 20px;
 
-            .upload-area{
-                width: 48%;
-                height: 200px;
-                border: 2px dashed $gray-light;
-                border-radius: 10px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: rgba($white, 0.8);
-                
-                img{
-                    max-width: 100%;
-                    max-height: 100%;
-                    object-fit: contain;
+            .upload-area {
+                width: 300px;
+                height: 190px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+            }
+
+            .upload-area_1 {
+                background-image: url('../img/Upload_ID_1.png');
+
+                &:hover {
+                    background-image: url('../img/Upload_ID_1_hover.png');
+                }
+            }
+
+            .upload-area_2 {
+                background-image: url('../img/Upload_ID_2.png');
+
+                &:hover {
+                    background-image: url('../img/Upload_ID_2_hover.png');
                 }
             }
         }

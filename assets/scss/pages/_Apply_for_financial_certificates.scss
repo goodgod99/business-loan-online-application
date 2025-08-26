@@ -6,3 +6,30 @@
         line-height: 1.4;
     }
 }
+.form-group{
+        position: relative;
+
+    .password-toggle {
+        position: absolute;
+        right: 12px;
+        top: 25px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        
+        &::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-image: url('../img/Button_Hide.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            transition: opacity 0.3s ease;
+        }}}
