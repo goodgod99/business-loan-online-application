@@ -4,22 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商金獨資戶線上進件 - 台新銀行</title>
-    <link rel="stylesheet" href="assets/scss/main.css">
+    <title>個人資料保護之法定告知事項 - 台新銀行</title>
+    <link rel="stylesheet" href="../assets/scss/main.css">
 </head>
 
 <body>
     <!-- Header -->
     <header class="header">
         <div class="logo">
-            <img src="assets/img/Logo.png" alt="台新銀行">
+            <img src="../assets/img/Logo.png" alt="台新銀行">
         </div>
     </header>
 
     <!-- Main Content -->
     <main class="main-content">
         <div class="background-container">
-
             <!-- Application Form -->
             <div class="form-container">
                 <div class="form-card">
@@ -153,7 +152,7 @@
                                 <div class="captcha-input">
                                     <label for="captcha">請輸入圖形驗證碼</label>
                                     <input type="text" id="captcha" name="captcha" required>
-                                    <img src="assets/img/captcha.png" alt="驗證碼" class="captcha-image">
+                                    <img src="../assets/img/captcha.png" alt="驗證碼" class="captcha-image">
                                     <button type="button" class="captcha-refresh">換圖</button>
                                 </div>
                             </div>
@@ -168,6 +167,7 @@
         </div>
     </main>
 
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -175,14 +175,37 @@
                 <p>© 台新國際商業銀行 Copyright Taishin International Bank. All Rights Reserved.</p>
             </div>
             <div class="footer-logo">
-                <img src="assets/img/footer Logo.png" alt="台新新光金控">
+                <img src="../assets/img/footer Logo.png" alt="台新新光金控">
             </div>
         </div>
     </footer>
 
+    <!-- Modal for Privacy Policy -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <h1>個人資料保護之法定告知事項</h1>
+            <p class="form-subtitle">必須向下捲動看完條款，才能點擊同意 </p>
+
+            <div class="modal-body">
+                <div class="pdf-viewer">
+                    <!-- <iframe src="../assets/pdf/privacy-policy.pdf" width="100%" height="400px">
+                                <p>您的瀏覽器不支援 PDF 顯示，請<a href="../assets/pdf/privacy-policy.pdf"
+                                        target="_blank">點擊這裡下載</a></p>
+                            </iframe> -->
+                    <img src="../assets/img/pdf.png" alt="pdf">
+                </div>
+
+            </div>
+            <div class="button-group">
+                <button type="button" class="btn gray-btn">返回</button>
+                <button type="submit" class="btn">同意</button>
+            </div>
+        </div>
+    </div>
+
     <!-- JavaScript -->
-<!--     <script src="assets/js/date-picker.js"></script>
- -->    
+    <!--     <script src="../assets/js/date-picker.js"></script>
+ -->
 
 </body>
 
