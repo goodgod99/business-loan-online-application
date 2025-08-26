@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>申請資料填寫及確認 - 台新銀行</title>
+    <link rel="stylesheet" href="../assets/scss/main.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="../assets/img/Logo.png" alt="台新銀行">
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="background-container">
+            <!-- Application Form -->
+            <div class="form-container">
+                <div class="form-card">
+                    <h1 class="form-title">申請資料填寫及確認</h1>
+
+                    <form class="application-form" id="confirmLoanForm">
+                        <div class="form-row">
+                            <div class="form-group apply-amount">
+                                <label for="applyAmount">申請金額</label>
+                                <input type="text" id="applyAmount" name="applyAmount" required>
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-select">
+                                    <label for="loanPurpose">貸款資金用途</label>
+                                    <select id="loanPurpose" name="loanPurpose" required>
+                                        <option value="" disabled selected>請選擇</option>
+                                        <option value="">營運週轉金</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 公司資料 -->
+                        <div class="section-header">
+                            <h2>公司資料</h2>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="companyId">統一編號</label>
+                                <input type="text" id="companyId" name="companyId" value="47500272"
+                                    class="readonly-input" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="companyName">公司名稱</label>
+                                <input type="text" id="companyName" name="companyName" value="駿朋創意企業社"
+                                    class="readonly-input" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="orgType">組織型態</label>
+                                <input type="text" id="orgType" name="orgType" value="合夥" class="readonly-input"
+                                    readonly>
+                            </div>
+                            <div class="phone-group">
+                                <label for="companyPhone_1">市內電話</label>
+                                <div class="companyPhone">
+                                    <input type="text" id="companyPhone_1" name="companyPhone_1" required>
+                                    <input type="text" id="companyPhone_2" name="companyPhone_2" required>
+                                    <input type="text" id="companyPhone_3" name="companyPhone_3" required>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 登記地址 -->
+                        <div class="form-address-row">
+                            <div class="address-group set-width-33">
+                                <div class="address-box">
+                                    <label for="businessCode">登記地址</label>
+                                    <div class="postal-code-display readonly-input">
+                                        <span class="postal-label">郵遞區號</span>
+                                        <input type="text" id="businessCode" name="businessCode" value="1234"
+                                            class="postal-number readonly-input" readonly>
+                                    </div>
+
+                                </div>
+                                <div class="address-box">
+                                    <label for="businessCity">縣市</label>
+                                    <input type="text" id="businessCity" name="businessCity" value="台中市"
+                                        class="readonly-input" readonly>
+                                </div>
+                                <div class="address-box">
+                                    <label for="businessDistrict">鄉鎮區</label>
+                                    <input type="text" id="businessDistrict" name="businessDistrict" value="清水區"
+                                        class="readonly-input" readonly>
+                                </div>
+                            </div>
+                            <div class="address-group">
+                                <div class="address-box">
+                                    <label for="businessAddress">地址</label>
+                                    <input type="text" id="businessAddress" name="businessAddress"
+                                        value="穅榔里仁愛路4段5鄰181號1樓" class="readonly-input" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 營業地址 -->
+                        <div class="form-address-row">
+                            <div class="address-group set-width-33">
+                                <div class="address-box">
+                                    <label for="postalCode">營業地址</label>
+                                    <div class="postal-code-display ">
+                                        <span class="postal-label">郵遞區號</span>
+                                        <input type="text" id="postalCode" name="postalCode" class="postal-number"
+                                            required>
+                                    </div>
+                                    <div class="address-check-box">
+                                        <input type="checkbox" id="sameAddress1" name="sameAddress1" required>
+                                        <label for="sameAddress1">同登記地址</label>
+                                    </div>
+
+                                </div>
+                                <div class="address-box">
+                                    <div class="custom-select">
+                                        <label for="postalCity">縣市</label>
+                                        <select id="postalCity" name="postalCity" required>
+                                            <option value="" disabled selected>請選擇</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="address-box">
+                                    <div class="custom-select">
+                                        <label for="postalDistrict">鄉鎮區</label>
+                                        <select id="postalDistrict" name="postalDistrict" required>
+                                            <option value="" disabled selected>請選擇</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="address-group">
+                                <div class="address-box">
+                                    <label for="postalAddress">地址</label>
+                                    <input type="text" id="postalAddress" name="postalAddress" value="" class=""
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 通訊地址 -->
+                        <div class="form-address-row">
+                            <div class="address-group set-width-33">
+                                <div class="address-box">
+                                    <label for="mailingCode">通訊地址</label>
+                                    <div class="postal-code-display ">
+                                        <span class="postal-label">郵遞區號</span>
+                                        <input type="text" id="mailingCode" name="mailingCode" class="postal-number"
+                                            required>
+                                    </div>
+                                    <div class="address-check-box">
+                                        <input type="checkbox" id="sameAddress2" name="sameAddress2" required>
+                                        <label for="sameAddress2">同登記地址</label>
+                                    </div>
+
+                                </div>
+                                <div class="address-box">
+                                    <div class="custom-select">
+                                        <label for="mailingCity">縣市</label>
+                                        <select id="mailingCity" name="mailingCity" required>
+                                            <option value="" disabled selected>請選擇</option>
+                                        </select>
+                                    </div>
+                                    <div class="address-check-box">
+                                        <input type="checkbox" id="sameAddress3" name="sameAddress3" required>
+                                        <label for="sameAddress3">同營業地址</label>
+                                    </div>
+                                </div>
+                                <div class="address-box">
+                                    <div class="custom-select">
+                                        <label for="mailingDistrict">鄉鎮區</label>
+                                        <select id="mailingDistrict" name="mailingDistrict" required>
+                                            <option value="" disabled selected>請選擇</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="address-group">
+                                <div class="address-box">
+                                    <label for="mailingAddress">地址</label>
+                                    <input type="text" id="mailingAddress" name="mailingAddress" value="" class=""
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 負責人資料 -->
+                        <div class="section-header">
+                            <h2>負責人資料</h2>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="principalName">姓名</label>
+                                <input type="text" id="principalName" name="principalName" value="梁紹賢"
+                                    class="readonly-input" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="principalPhone">手機</label>
+                                <input type="text" id="principalPhone" name="principalPhone" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="principalPhone">Email</label>
+                                <input type="email" id="principalEmail" name="principalEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="principalName">生日</label>
+                                <input type="text" id="principalBirthDate" name="principalBirthDate" value="0581212"
+                                    class="readonly-input" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="principalIdCardNumber">身份證字號</label>
+                                <input type="text" id="principalIdCardNumber" name="principalIdCardNumber"
+                                    value="O1234567" class="readonly-input" readonly>
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-select">
+                                    <label for="principalIdCardAddress">發證地點</label>
+                                    <select id="principalIdCardAddress" name="principalIdCardAddress" required>
+                                        <option value="" disabled selected>請選擇</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <div class="custom-select">
+                                    <label for="changeRecord">補換發紀錄</label>
+                                    <select id="changeRecord" name="changeRecord" required>
+                                        <option value="" disabled selected>請選擇</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group date-group">
+                                <label for="changeDate">補換發日期</label>
+                                <div class="date-inputs">
+                                    <span>民國</span>
+                                    <select id="changeYear" name="changeYear" required>
+                                        <option value=""></option>
+                                    </select>
+                                    <span>年</span>
+                                    <select id="changeMonth" name="changeMonth" required>
+                                        <option value=""></option>
+                                    </select>
+                                    <span>月</span>
+                                    <select id="changeDay" name="changeDay" required>
+                                        <option value=""></option>
+                                    </select>
+                                    <span>日</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn">下一步</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>© 台新國際商業銀行 Copyright Taishin International Bank. All Rights Reserved.</p>
+            </div>
+            <div class="footer-logo">
+                <img src="../assets/img/footer Logo.png" alt="台新新光金控">
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <!--     <script src="../assets/js/date-picker.js"></script>
+ -->
+
+</body>
+
+</html>
