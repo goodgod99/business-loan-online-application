@@ -552,7 +552,7 @@ main .background-container .form-container {
   .form-card {
     width: 100%;
     margin: 0;
-    padding-top: 250px;
+    padding-top: 50vw;
     background-color: rgba(255, 255, 255, 0);
     border-radius: 0;
     padding-left: 10px;
