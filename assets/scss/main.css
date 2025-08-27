@@ -561,69 +561,6 @@ main .background-container .form-container {
   }
 }
 
-@media (max-width: 768px) {
-  #stareLoanForm .flex-reverse {
-    flex-direction: column-reverse;
-  }
-}
-
-#companyVerificationForm .computer-icon {
-  margin-bottom: 20px;
-}
-#companyVerificationForm .computer-icon img {
-  max-width: 400px;
-  margin: auto;
-  display: block;
-}
-
-.id-card-upload .example-images {
-  width: 100%;
-  height: 100px;
-  background-image: url("../img/IdCardErr_1.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-@media (max-width: 768px) {
-  .id-card-upload .example-images {
-    height: 250px;
-    background-image: url("../img/mobil_IdCardErr_1.png");
-  }
-}
-.id-card-upload .upload-section .upload-row {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  gap: 20px;
-}
-.id-card-upload .upload-section .upload-row .upload-area {
-  width: 300px;
-  height: 190px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.id-card-upload .upload-section .upload-row .upload-area_1 {
-  background-image: url("../img/Upload_ID_1.png");
-}
-.id-card-upload .upload-section .upload-row .upload-area_1:hover {
-  background-image: url("../img/Upload_ID_1_hover.png");
-}
-.id-card-upload .upload-section .upload-row .upload-area_2 {
-  background-image: url("../img/Upload_ID_2.png");
-}
-.id-card-upload .upload-section .upload-row .upload-area_2:hover {
-  background-image: url("../img/Upload_ID_2_hover.png");
-}
-@media (max-width: 768px) {
-  .id-card-upload .upload-section .upload-row {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
 .password-memo p {
   flex: 1;
   display: block;
@@ -676,54 +613,6 @@ main .background-container .form-container {
 .button-group .btn .loading-icon {
   width: 16px;
   height: 16px;
-}
-
-#privacyModal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#privacyModal .modal-content {
-  background-color: white;
-  border-radius: 12px;
-  max-width: 860px;
-  padding: 30px 0;
-}
-#privacyModal .modal-content .modal-body img {
-  width: 100%;
-}
-@media (max-width: 768px) {
-  #privacyModal {
-    background-color: #ffffff;
-  }
-  #privacyModal .modal-content {
-    width: 100%;
-    border-radius: 0;
-    max-width: none;
-    padding: 20px 10px;
-  }
-  #privacyModal .modal-content .modal-body {
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #privacyModal .modal-content .modal-body img {
-    width: 150%;
-  }
-}
-
-@media (max-width: 768px) {
-  .main-in-statement {
-    overflow: hidden;
-  }
 }
 
 #confirmLoanForm .apply-amount {
@@ -894,4 +783,115 @@ main .background-container .form-container {
   #confirmLoanForm .form-address-row .address-group:nth-child(2) {
     width: 100%;
   }
+}
+
+@media (max-width: 768px) {
+  #stareLoanForm .flex-reverse {
+    flex-direction: column-reverse;
+  }
+}
+
+#privacyModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#privacyModal .modal-content {
+  background-color: white;
+  border-radius: 12px;
+  max-width: 860px;
+  padding: 30px 0;
+}
+#privacyModal .modal-content .modal-body img {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  #privacyModal {
+    background-color: #ffffff;
+  }
+  #privacyModal .modal-content {
+    width: 100%;
+    border-radius: 0;
+    max-width: none;
+    padding: 20px 10px;
+  }
+  #privacyModal .modal-content .modal-body {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #privacyModal .modal-content .modal-body img {
+    width: 150%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-in-statement {
+    overflow: hidden;
+  }
+}
+
+.id-card-upload .example-images {
+  width: 100%;
+  height: 100px;
+  background-image: url("../img/IdCardErr_1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (max-width: 768px) {
+  .id-card-upload .example-images {
+    height: 250px;
+    background-image: url("../img/mobil_IdCardErr_1.png");
+  }
+}
+.id-card-upload .upload-section .upload-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 20px;
+}
+.id-card-upload .upload-section .upload-row .upload-area {
+  width: 300px;
+  height: 190px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.id-card-upload .upload-section .upload-row .upload-area_1 {
+  background-image: url("../img/Upload_ID_1.png");
+}
+.id-card-upload .upload-section .upload-row .upload-area_1:hover {
+  background-image: url("../img/Upload_ID_1_hover.png");
+}
+.id-card-upload .upload-section .upload-row .upload-area_2 {
+  background-image: url("../img/Upload_ID_2.png");
+}
+.id-card-upload .upload-section .upload-row .upload-area_2:hover {
+  background-image: url("../img/Upload_ID_2_hover.png");
+}
+@media (max-width: 768px) {
+  .id-card-upload .upload-section .upload-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+#companyVerificationForm .computer-icon {
+  margin-bottom: 20px;
+}
+#companyVerificationForm .computer-icon img {
+  max-width: 400px;
+  margin: auto;
+  display: block;
 }/*# sourceMappingURL=main.css.map */

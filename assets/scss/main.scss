@@ -6,11 +6,12 @@
 @import 'layout';     // 佈局樣式
 
 // Import pages
-@import 'pages/index'; 
-@import 'pages/Verify_Company'; 
-@import 'pages/Verify_Company_fail';
-@import 'pages/Verify_partnership_New_customer_info';
-@import 'pages/Upload_ID_card';
 @import 'pages/Apply_for_financial_certificates'; 
-@import 'pages/statement';
 @import 'pages/Fill_in_and_confirm_information';
+@import 'pages/index'; 
+@import 'pages/statement';
+@import 'pages/Upload_ID_card';
+@import 'pages/Verify_Company'; 
+
+
+
