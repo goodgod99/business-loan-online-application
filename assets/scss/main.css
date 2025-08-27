@@ -94,16 +94,16 @@ h1 {
   display: inline-block;
 }
 
-span.red-color {
-  color: #D70D18;
+.red-color {
+  color: #D70D18 !important;
 }
 
-/* .err_flag {
-    display: inline-block !important;
-    border-color: $primary-red !important;
-} */
 [data-err-flag="1"] {
   border-color: #D70D18 !important;
+}
+
+small[data-err-flag="1"] {
+  color: #D70D18 !important;
   display: inline-block !important;
 }
 
@@ -665,6 +665,17 @@ main .background-container .form-container {
   background-position: center;
   background-size: contain;
   transition: opacity 0.3s ease;
+}
+
+.button-group .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.button-group .btn .loading-icon {
+  width: 16px;
+  height: 16px;
 }
 
 #privacyModal {

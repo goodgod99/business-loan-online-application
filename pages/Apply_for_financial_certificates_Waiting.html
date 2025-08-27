@@ -44,8 +44,8 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="certificatePassword">設定憑證密碼</label>
-                            <input type="password" data-err-flag="0" id="certificatePassword" name="certificatePassword" 
-                                required>
+                            <input type="password" data-err-flag="0" id="certificatePassword" name="certificatePassword" value="*********"
+                                class="readonly-input" readonly>
                             <button type="button" class="password-toggle"
                                 onclick="togglePassword('certificatePassword')"></button>
                             <small data-err-flag="0" class="form-err-hint">請輸入正確身分證字號（限本國人）</small>
@@ -54,7 +54,7 @@
                         <div class="form-group">
                             <label for="confirmCertificatePassword">請再次輸入密碼</label>
                             <input type="password" data-err-flag="0" id="confirmCertificatePassword"
-                                name="confirmCertificatePassword" required>
+                                name="confirmCertificatePassword" value="*********" class="readonly-input"  readonly>
                             <button type="button" class="password-toggle"
                                 onclick="togglePassword('confirmCertificatePassword')"></button>
                         </div>
@@ -72,7 +72,7 @@
                     <!-- 按鈕區域 -->
                     <div class="button-group">
                         <button type="button" class="btn gray-btn">取消申請憑證</button>
-                        <button type="submit" class="btn">確定申請憑證</button>
+                        <button type="submit" class="btn">申請中，請稍後<img src="../assets/img/loading.svg" alt="載入中" class="loading-icon"></button>
                     </div>
                 </div>
             </div>

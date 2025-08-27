@@ -1,19 +1,22 @@
-.password-memo{
-    p{
+.password-memo {
+    p {
         flex: 1;
         display: block;
         font-size: 10px;
         line-height: 1.4;
     }
-    @media(max-width: $mobile){
+
+    @media(max-width: $mobile) {
         gap: 0;
-        p{
+
+        p {
             font-size: 12px;
-    }
+        }
     }
 }
-.form-group{
-        position: relative;
+
+.form-group {
+    position: relative;
 
     .password-toggle {
         position: absolute;
@@ -28,7 +31,7 @@
         justify-content: center;
         width: 24px;
         height: 24px;
-        
+
         &::after {
             content: '';
             width: 20px;
@@ -38,4 +41,20 @@
             background-position: center;
             background-size: contain;
             transition: opacity 0.3s ease;
-        }}}
+        }
+    }
+}
+
+.button-group{
+    .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    
+    .loading-icon {
+        width: 16px;
+        height: 16px;
+    }
+}
+}

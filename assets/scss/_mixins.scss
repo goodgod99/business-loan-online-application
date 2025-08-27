@@ -44,17 +44,17 @@ h1 {
 
 
 // 紅色字體
-span.red-color {
-    color: $primary-red;
+.red-color {
+    color: $primary-red !important;
 }
 
 // 錯誤輸入樣式
-/* .err_flag {
-    display: inline-block !important;
-    border-color: $primary-red !important;
-} */
 [data-err-flag="1"] {
     border-color: $primary-red !important;
+    
+}
+small[data-err-flag="1"] {
+    color: $primary-red !important;
     display: inline-block !important;
 }
 
