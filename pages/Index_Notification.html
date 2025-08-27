@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>商金獨資戶線上進件 - 台新銀行</title>
-    <link rel="stylesheet" href="assets/scss/main.css">
+    <link rel="stylesheet" href="../assets/scss/main.css">
 </head>
 
 <body>
     <!-- Header -->
     <header class="header">
         <div class="logo">
-            <img src="assets/img/Logo.png" alt="台新銀行">
+            <img src="../assets/img/Logo.png" alt="台新銀行">
         </div>
     </header>
 
@@ -29,8 +29,8 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="companyNumber">公司統編</label>
-                                <input type="text" data-err-flag="0" id="companyNumber" name="companyNumber" required>
-                                <small data-err-flag="0" class="form-err-hint">請輸入8位數字</small>
+                                <input type="text" data-err-flag="1" id="companyNumber" name="companyNumber" required>
+                                <small data-err-flag="1" class="form-err-hint">請輸入8位數字</small>
 
                             </div>
                             <div class="form-group">
@@ -43,22 +43,22 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="representativeName">負責人姓名</label>
-                                <input type="text" data-err-flag="0" id="representativeName" name="representativeName"
+                                <input type="text" data-err-flag="1" id="representativeName" name="representativeName"
                                     required>
-                                <small data-err-flag="0" class="form-err-hint">請輸入正確姓名</small>
+                                <small data-err-flag="1" class="form-err-hint">請輸入正確姓名</small>
                             </div>
                             <div class="form-group">
                                 <label for="representativeId">負責人身份證字號</label>
-                                <input type="text" data-err-flag="0" id="representativeId" name="representativeId"
+                                <input type="text" data-err-flag="1" id="representativeId" name="representativeId"
                                     required>
-                                <small data-err-flag="0" class="form-err-hint">請輸入正確身分證字號（限本國人）</small>
+                                <small data-err-flag="1" class="form-err-hint">請輸入正確身分證字號（限本國人）</small>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group date-group">
                                 <label for="birthDate">負責人生日</label>
-                                <div data-err-flag="0" class="date-inputs">
+                                <div data-err-flag="1" class="date-inputs">
                                     <span>民國</span>
                                     <select id="birthYear" name="birthYear" required>
                                         <option value="" disabled selected></option>
@@ -127,7 +127,7 @@
                                     </select>
                                     <span>日</span>
                                 </div>
-                                <small data-err-flag="0" class="form-err-hint">請輸入正確生日</small>
+                                <small data-err-flag="1" class="form-err-hint">請輸入正確生日</small>
                             </div>
                             <div class="form-group">
                                 <label for="businessNumber">營業人員編</label>
@@ -156,7 +156,7 @@
                                 <div class="captcha-input">
                                     <label for="captcha">請輸入圖形驗證碼</label>
                                     <input type="text" id="captcha" name="captcha" required>
-                                    <img src="assets/img/captcha.png" alt="驗證碼" class="captcha-image">
+                                    <img src="../assets/img/captcha.png" alt="驗證碼" class="captcha-image">
                                     <button type="button" class="captcha-refresh">換圖</button>
                                 </div>
                             </div>
@@ -178,13 +178,13 @@
                 <p>© 台新國際商業銀行 Copyright Taishin International Bank. All Rights Reserved.</p>
             </div>
             <div class="footer-logo">
-                <img src="assets/img/footer Logo.png" alt="台新新光金控">
+                <img src="../assets/img/footer Logo.png" alt="台新新光金控">
             </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
-    <!--     <script src="assets/js/date-picker.js"></script>
+    <!--     <script src="../assets/js/date-picker.js"></script>
  -->
 
 </body>

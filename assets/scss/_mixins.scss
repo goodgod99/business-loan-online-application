@@ -43,9 +43,13 @@ span.red-color {
 }
 
 // 錯誤輸入樣式
-.err_flag {
+/* .err_flag {
     display: inline-block !important;
     border-color: $primary-red !important;
+} */
+[data-err-flag="1"] {
+    border-color: $primary-red !important;
+    display: inline-block !important;
 }
 
 // 唯讀輸入框

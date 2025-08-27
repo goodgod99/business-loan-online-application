@@ -88,9 +88,13 @@ span.red-color {
   color: #D70D18;
 }
 
-.err_flag {
-  display: inline-block !important;
+/* .err_flag {
+    display: inline-block !important;
+    border-color: $primary-red !important;
+} */
+[data-err-flag="1"] {
   border-color: #D70D18 !important;
+  display: inline-block !important;
 }
 
 .readonly-input {
