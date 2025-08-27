@@ -839,13 +839,12 @@ main .background-container .form-container {
   align-items: center;
   margin-top: 8px;
   margin-left: 8px;
-  gap: 5px;
 }
 #confirmLoanForm .form-address-row .address-group .address-box .address-check-box input[type=checkbox] {
   margin: 0;
   accent-color: #D70D18;
-  width: 13px;
-  height: 13px;
+  width: 6px;
+  height: 6px;
   transform: scale(0.8);
 }
 #confirmLoanForm .form-address-row .address-group .address-box .address-check-box label {

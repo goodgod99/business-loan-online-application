@@ -152,13 +152,12 @@
                     align-items: center;
                     margin-top: 8px;
                     margin-left: 8px;
-                    gap: 5px;
 
                     input[type="checkbox"] {
                         margin: 0;
                         accent-color: $primary-red;
-                        width: 13px;
-                        height: 13px;
+                        width: 6px;
+                        height: 6px;
                         transform: scale(0.8);
                     }
 
