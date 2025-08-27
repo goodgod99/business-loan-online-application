@@ -173,7 +173,7 @@
 
                     @media (max-width: $mobile) {
                         margin-top: 0px;
-                        transform: translateY(80px) scale(0.9);
+                        transform: translateY(90px) scale(0.9);
 
                     }
                 }
@@ -196,6 +196,7 @@
 
         @media (max-width: $mobile) {
             flex-direction: column;
+            margin-bottom: 40px;
 
             .address-group {
                 &:nth-child(1) {

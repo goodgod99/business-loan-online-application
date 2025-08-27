@@ -859,7 +859,7 @@ main .background-container .form-container {
 @media (max-width: 768px) {
   #confirmLoanForm .form-address-row .address-group .address-box .address-check-box {
     margin-top: 0px;
-    transform: translateY(80px) scale(0.9);
+    transform: translateY(90px) scale(0.9);
   }
 }
 #confirmLoanForm .form-address-row .address-group .address-box.set-width-33 {
@@ -874,6 +874,7 @@ main .background-container .form-container {
 @media (max-width: 768px) {
   #confirmLoanForm .form-address-row {
     flex-direction: column;
+    margin-bottom: 40px;
   }
   #confirmLoanForm .form-address-row .address-group:nth-child(1) {
     width: 100%;
