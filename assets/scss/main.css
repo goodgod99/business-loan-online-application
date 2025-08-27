@@ -843,9 +843,10 @@ main .background-container .form-container {
 }
 #confirmLoanForm .form-address-row .address-group .address-box .address-check-box input[type=checkbox] {
   margin: 0;
-  transform: scale(1.1);
   accent-color: #D70D18;
   width: 13px;
+  height: 13px;
+  transform: scale(0.8);
 }
 #confirmLoanForm .form-address-row .address-group .address-box .address-check-box label {
   font-size: 12px;
@@ -859,8 +860,8 @@ main .background-container .form-container {
 @media (max-width: 768px) {
   #confirmLoanForm .form-address-row .address-group .address-box .address-check-box {
     /*                         margin-top: 0px;
-                            margin-left: 8px;
-                            transform: translateY(76px); */
+    margin-left: 8px;
+    transform: translateY(76px); */
   }
 }
 #confirmLoanForm .form-address-row .address-group .address-box.set-width-33 {
