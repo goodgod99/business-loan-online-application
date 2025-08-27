@@ -1,6 +1,7 @@
 /* 佈局樣式 */
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -9,8 +10,8 @@ html, body {
 body {
     display: grid;
     // header(自動) main(剩餘空間) footer(自動)
-    grid-template-rows: auto 1fr auto; 
-    min-height: 100vh; 
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 }
 
 
@@ -21,6 +22,7 @@ header {
     width: 100%;
     display: flex;
     align-items: center;
+    z-index: 10;
 
     .logo {
         padding: 0 100px;
@@ -30,12 +32,26 @@ header {
             width: auto;
         }
     }
+
+    @media (max-width: $mobile) {
+        .logo {
+        padding: 0 30px;
+
+        img {
+            height: 30px;
+            width: auto;
+        }
+    }
+
+    }
 }
 
 //Footer
 footer {
     height: 56px;
     width: 100%;
+        z-index: 10;
+
 
     .footer-content {
         display: flex;
@@ -46,7 +62,7 @@ footer {
             width: 60%;
             height: 100%;
             background-color: $primary-red;
-            padding: 0 100px ;
+            padding: 0 100px;
             display: flex;
             align-items: center;
 
@@ -60,12 +76,30 @@ footer {
             width: 40%;
             height: 100%;
             background-color: $gray-medium;
-            padding: 0 20px ;
+            padding: 0 20px;
             display: flex;
             align-items: center;
+
             img {
                 height: 20px;
                 width: auto;
+            }
+        }
+    }
+
+    @media (max-width: $mobile) {
+        .footer-content {
+            .footer-text {
+                width: 100%;
+                justify-content: center;
+
+                p span {
+                    display: none;
+                }
+            }
+
+            .footer-logo {
+                display: none;
             }
         }
     }
@@ -76,16 +110,49 @@ main {
     .background-container {
         width: 100%;
         height: 100%;
-        background-image: url('../img/BG\ 1.png'); 
-        background-size: cover;       
-        background-position: center;  
+        background-image: url('../img/BG\ 1.png');
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
         padding: 0;
         position: relative;
+
         .form-container {
             width: 100%;
             display: flex;
             justify-content: center;
         }
+    }
+
+    @media (max-width: $mobile) {
+        .background-container {
+            background-image: url('../img/Mobile_BG\ 1.png');
+            background-size: contain;
+            background-position: top;
+            background-repeat: no-repeat;
+        }
+
+    }
+}
+
+// 表單卡片樣式
+.form-card {
+    width: 550px;
+    margin: 50px;
+    background-color: rgba($white, 0.9);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    @media (max-width: $mobile) {
+        width: 100%;
+        margin: 0;
+        padding-top: 250px;
+        background-color: rgba($white, 0);
+        border-radius: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-shadow: none;
     }
 }

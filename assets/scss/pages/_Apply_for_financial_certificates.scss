@@ -5,6 +5,12 @@
         font-size: 10px;
         line-height: 1.4;
     }
+    @media(max-width: $mobile){
+        gap: 0;
+        p{
+            font-size: 12px;
+    }
+    }
 }
 .form-group{
         position: relative;

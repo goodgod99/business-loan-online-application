@@ -125,8 +125,8 @@
                         flex: 1;
                         color: $gray-dark;
                         font-size: 9px;
-                        font-weight: 400 ;
-                        transform: none ;
+                        font-weight: 400;
+                        transform: none;
                     }
 
                     .postal-number {
@@ -167,6 +167,12 @@
                         background: none;
                         transform: none;
                         font-weight: 400;
+                    }
+
+                    @media (max-width: $mobile) {
+                        margin-top: 0px;
+                        margin-left: 8px;
+                        transform: translateY(76px);
                     }
                 }
 

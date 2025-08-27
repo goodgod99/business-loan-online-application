@@ -1,8 +1,16 @@
 .id-card-upload {
     .example-images {
-        img {
-            width: 100%;
-            height: auto;
+        width: 100%;
+        height: 100px;
+        background-image: url('../img/IdCardErr_1.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @media (max-width: $mobile) {
+            height: 250px;
+            background-image: url('../img/mobil_IdCardErr_1.png');
+
         }
     }
 
@@ -38,6 +46,12 @@
                 &:hover {
                     background-image: url('../img/Upload_ID_2_hover.png');
                 }
+            }
+
+            @media( max-width: $mobile) {
+                flex-direction: column;
+                align-items: center;
+
             }
         }
     }
