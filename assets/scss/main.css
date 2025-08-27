@@ -821,6 +821,7 @@ main .background-container .form-container {
   font-size: 9px;
   font-weight: 400;
   transform: none;
+  background-color: transparent;
 }
 #confirmLoanForm .form-address-row .address-group .address-box .postal-code-display .postal-number {
   flex: 1;
@@ -838,12 +839,13 @@ main .background-container .form-container {
   align-items: center;
   margin-top: 8px;
   margin-left: 8px;
+  gap: 5px;
 }
 #confirmLoanForm .form-address-row .address-group .address-box .address-check-box input[type=checkbox] {
   margin: 0;
   transform: scale(1.1);
   accent-color: #D70D18;
-  width: 20px;
+  width: 13px;
 }
 #confirmLoanForm .form-address-row .address-group .address-box .address-check-box label {
   font-size: 12px;
@@ -856,9 +858,9 @@ main .background-container .form-container {
 }
 @media (max-width: 768px) {
   #confirmLoanForm .form-address-row .address-group .address-box .address-check-box {
-    margin-top: 0px;
-    margin-left: 8px;
-    transform: translateY(76px);
+    /*                         margin-top: 0px;
+                            margin-left: 8px;
+                            transform: translateY(76px); */
   }
 }
 #confirmLoanForm .form-address-row .address-group .address-box.set-width-33 {

@@ -127,6 +127,7 @@
                         font-size: 9px;
                         font-weight: 400;
                         transform: none;
+                        background-color: transparent ;
                     }
 
                     .postal-number {
@@ -151,12 +152,13 @@
                     align-items: center;
                     margin-top: 8px;
                     margin-left: 8px;
+                    gap: 5px;
 
                     input[type="checkbox"] {
                         margin: 0;
                         transform: scale(1.1);
                         accent-color: $primary-red;
-                        width: 20px;
+                        width: 13px;
                     }
 
                     label {
@@ -170,9 +172,9 @@
                     }
 
                     @media (max-width: $mobile) {
-                        margin-top: 0px;
+/*                         margin-top: 0px;
                         margin-left: 8px;
-                        transform: translateY(76px);
+                        transform: translateY(76px); */
                     }
                 }
 
