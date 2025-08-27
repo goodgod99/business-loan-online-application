@@ -172,8 +172,9 @@
                     }
 
                     @media (max-width: $mobile) {
+                        position: absolute;
                         margin-top: 0px;
-                        transform: translateY(90px) scale(0.9);
+                        transform: translateY(70px) scale(0.9);
 
                     }
                 }
