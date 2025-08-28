@@ -273,7 +273,6 @@ small[data-err-flag="1"] {
 
 .btn {
   width: 230px;
-  height: 50px;
   background: #D70D18;
   color: #ffffff;
   border: none;
@@ -289,6 +288,14 @@ small[data-err-flag="1"] {
 }
 .btn:hover {
   background: #AC0108;
+}
+
+a.btn {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .button-group {
@@ -313,7 +320,7 @@ small[data-err-flag="1"] {
   .button-group .btn {
     max-width: 180px;
     gap: 5px;
-    margin: auto 0;
+    margin: 0;
   }
 }
 
