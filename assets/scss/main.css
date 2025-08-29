@@ -480,7 +480,7 @@ a.btn {
     text-align: center;
   }
   .verification-fail-content .fail-illustration {
-    margin: 20px 0;
+    /* margin: 20px 0; */
   }
   .verification-fail-content .fail-illustration img {
     width: 250px;
