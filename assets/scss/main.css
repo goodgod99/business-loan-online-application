@@ -479,6 +479,9 @@ a.btn {
     flex-direction: column;
     text-align: center;
   }
+  .verification-fail-content .fail-illustration {
+    margin: 20px 0;
+  }
   .verification-fail-content .fail-illustration img {
     width: 250px;
   }
@@ -999,4 +1002,9 @@ main .background-container .form-container {
   max-width: 400px;
   margin: auto;
   display: block;
+}
+@media (max-width: 768px) {
+  #companyVerificationForm .computer-icon {
+    margin: 30px 0;
+  }
 }/*# sourceMappingURL=main.css.map */
