@@ -11,6 +11,11 @@
             position: absolute;
             top: 30px;
             right: 15px;
+
+            @media (max-width: $mobile) {
+                top: 33px;
+                font-size: 15px;
+            }
         }
     }
 
@@ -64,6 +69,18 @@
             }
         }
 
+        @media (max-width: $mobile) {
+
+            label {
+                font-size: 15px;
+            }
+
+            .companyPhone input {
+                font-size: 16px;
+                padding: 15px 15px;
+            }
+        }
+
     }
 
     // 表單行排版
@@ -87,6 +104,11 @@
                     font-size: 12px;
                     transform: translateY(50%) translateX(12px);
                     background-color: rgba($white, 0.8);
+
+                    @media (max-width: $mobile) {
+                        font-size: 15px;
+                    }
+
                 }
 
 
@@ -104,6 +126,10 @@
                         outline: none;
                         border-color: $gray-dark;
                         background: $white;
+                    }
+                    @media (max-width: $mobile) {
+                        font-size: 16px;
+                        padding: 15px 15px;
                     }
                 }
 
@@ -144,6 +170,19 @@
                         outline: none;
                         border-color: $gray-dark;
                     }
+
+                    @media (max-width: $mobile) {
+                        font-size: 16px;
+                        padding: 15px 8px;
+
+                        .postal-label {
+                            font-size: 11px;
+                        }
+
+                        .postal-number {
+                            font-size: 16px;
+                        }
+                    }
                 }
 
                 //同登記地址checkbox
@@ -174,8 +213,11 @@
                     @media (max-width: $mobile) {
                         position: absolute;
                         margin-top: 0px;
-                        transform: translateY(70px) scale(0.9);
+                        transform: translateY(80px) scale(0.9);
 
+                        label{
+                            font-size: 15px;
+                        }
                     }
                 }
 
