@@ -11,8 +11,12 @@
     }
 
     @media (max-width: $mobile) {
+        
         .computer-icon {
             margin: 30px 0;
+            img {
+            width: 90vw;
+        }
         }
     }
 

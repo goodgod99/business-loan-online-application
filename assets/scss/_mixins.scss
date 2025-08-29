@@ -310,6 +310,7 @@ small[data-err-flag="1"] {
     margin: auto;
     display: block;
     text-wrap: nowrap;
+    background-origin: border-box;
 
     &:hover {
         background: $dark-red;
@@ -327,15 +328,15 @@ a.btn {
 // 下一步按鈕（兩個）
 .button-group {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
     max-width: 540px;
-    gap: 8px;
 
     .btn {
         display: inline-block;
+        margin: 0;
     }
 
     .gray-btn {
@@ -348,11 +349,13 @@ a.btn {
     }
 
     @media(max-width: $mobile) {
-        .btn {
-            max-width: 180px;
-            gap: 5px;
+        gap: 5px;
+            .btn {
+            max-width: 170px;
             margin: 0;
+            padding: 15px;
         }
+        
 
     }
 }
