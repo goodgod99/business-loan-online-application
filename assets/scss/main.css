@@ -467,6 +467,7 @@ a.btn {
 .verification-fail-content .error-message p {
   font-size: 16px;
   margin-top: 5px;
+  line-height: 1.2;
 }
 .verification-fail-content .error-message .important-msg {
   font-size: 18px;
@@ -482,9 +483,12 @@ a.btn {
   }
   .verification-fail-content .error-message p {
     display: inline;
+    font-size: 18px;
+    line-height: 1.5;
   }
   .verification-fail-content .error-message .important-msg {
     display: block;
+    font-size: 20px;
   }
 }
 
