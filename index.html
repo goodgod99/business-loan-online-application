@@ -61,6 +61,7 @@
                                 <div data-err-flag="0" class="date-inputs">
                                     <span>民國</span>
                                     <select id="birthYear" name="birthYear" required>
+                                        <option value="" disabled>年</option>
                                         <option value="" disabled selected></option>
                                         <option value="60">60</option>
                                         <option value="59">59</option>
@@ -74,9 +75,11 @@
                                         <option value="51">51</option>
                                         <option value="50">50</option>
                                     </select>
-                                    <span>年</span>
+                                    <span class="arrow">年</span>
                                     <select id="birthMonth" name="birthMonth" required>
+                                        <option value="" disabled>月</option>
                                         <option value="" disabled selected></option>
+
                                         <option value="1">01</option>
                                         <option value="2">02</option>
                                         <option value="3">03</option>
@@ -90,9 +93,11 @@
                                         <option value="11">11</option>
                                         <option value="12">12</option>
                                     </select>
-                                    <span>月</span>
+                                    <span class="arrow">月</span>
                                     <select id="birthDay" name="birthDay" required>
+                                        <option value="" disabled>日</option>
                                         <option value="" disabled selected></option>
+
                                         <option value="1">01</option>
                                         <option value="2">02</option>
                                         <option value="3">03</option>
@@ -125,7 +130,7 @@
                                         <option value="30">30</option>
                                         <option value="31">31</option>
                                     </select>
-                                    <span>日</span>
+                                    <span class="arrow">日</span>
                                 </div>
                                 <small data-err-flag="0" class="form-err-hint">請輸入正確生日</small>
                             </div>
@@ -140,15 +145,15 @@
                             <div class="checkbox-section">
                                 <div class="checkbox-group">
                                     <input type="checkbox" id="agree1" name="agreements" required>
-                                    <label for="agree1">本人已閱讀並同意<a href="#" class="link">GB2B全球數位企金網路服務條款</a></label>
+                                    <label for="agree1">本人已閱讀並同意<a class="link">GB2B全球數位企金網路服務條款</a></label>
                                 </div>
                                 <div class="checkbox-group">
                                     <input type="checkbox" id="agree2" name="agreements" required>
-                                    <label for="agree2">本人已閱讀並同意<a href="#" class="link">申請企業貸款</a>的定事項</label>
+                                    <label for="agree2">本人已閱讀並同意<a class="link">申請企業貸款</a>的定事項</label>
                                 </div>
                                 <div class="checkbox-group">
                                     <input type="checkbox" id="agree3" name="agreements" required>
-                                    <label for="agree3">本人已閱讀並同意<a href="#" class="link">個人資料保護法之法定公告事項</a></label>
+                                    <label for="agree3">本人已閱讀並同意<a class="link">個人資料保護法之法定公告事項</a></label>
                                 </div>
                             </div>
 
@@ -164,8 +169,8 @@
 
                         </div>
 
-<!--                         <button type="submit" class="btn">下一步</button>
- -->                        <a href="pages/statement.html" class="btn">下一步</a>
+                        <!--                         <button type="submit" class="btn">下一步</button>
+ --> <a href="pages/statement.html" class="btn">下一步</a>
                     </form>
                 </div>
             </div>

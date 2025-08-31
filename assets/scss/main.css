@@ -226,7 +226,7 @@ small[data-err-flag="1"] {
 }
 .checkbox-section .checkbox-group input[type=checkbox] {
   margin-right: 10px;
-  margin-top: 2px;
+  margin-top: 3px;
   transform: scale(1.1);
   accent-color: #D70D18;
 }
@@ -246,6 +246,9 @@ small[data-err-flag="1"] {
   text-decoration: underline;
 }
 @media (max-width: 768px) {
+  .checkbox-section .checkbox-group input[type=checkbox] {
+    margin-top: 6px;
+  }
   .checkbox-section .checkbox-group label {
     font-size: 18px;
   }
@@ -446,10 +449,19 @@ a.btn {
   border-color: #888888;
 }
 .date-group .date-inputs select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   flex: 1;
   outline: none;
   border: none;
   color: #888888;
+}
+.date-group .date-inputs select:invalid {
+  color: #EDEDED;
+}
+.date-group .date-inputs select:invalid option {
+  background-color: #ffffff;
 }
 @media (max-width: 768px) {
   .date-group .date-inputs {
@@ -897,6 +909,17 @@ main .background-container .form-container {
   }
 }
 
+#stareLoanForm .arrow::before {
+  content: "";
+  position: absolute;
+  transform: translateX(-20px) translateY(2px);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #888888;
+  pointer-events: none;
+}
 @media (max-width: 768px) {
   #stareLoanForm .flex-reverse {
     flex-direction: column-reverse;

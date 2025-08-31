@@ -1,5 +1,20 @@
 
 #stareLoanForm{
+    .arrow{
+                            // 自訂箭頭
+            &::before {
+                content: '';
+                position: absolute;
+                transform: translateX(-20px) translateY(2px);
+
+                width: 0;
+                height: 0;
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                border-top: 8px solid $gray-dark;
+                pointer-events: none;
+            }
+    }
 
     @media (max-width: $mobile) {
         .flex-reverse{
