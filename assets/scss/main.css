@@ -472,7 +472,7 @@ a.btn {
   }
   .date-group .date-inputs select {
     height: 30px;
-    /* font-size: 16px; */
+    font-size: 16px !important;
   }
 }
 
