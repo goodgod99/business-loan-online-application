@@ -456,12 +456,13 @@ a.btn {
   outline: none;
   border: none;
   color: #888888;
+  background: #ffffff;
 }
 .date-group .date-inputs select:invalid {
   color: #EDEDED;
 }
 .date-group .date-inputs select:invalid option {
-  background-color: #ffffff;
+  background: #ffffff;
 }
 @media (max-width: 768px) {
   .date-group .date-inputs {
