@@ -30,17 +30,22 @@
 
         .modal-content {
             width: 100%;
+            height: calc(100vh - 116px);
+            box-sizing: border-box;
             border-radius: 0;
             max-width: none;
             padding: 20px 10px;
+            display: flex;
+            flex-direction: column;
 
             .modal-body {
+                flex: 1;
                 overflow: hidden;
                 display: flex;
                 justify-content: center;
                 align-items: center;
             img {
-                width: 150%;
+                width: 400%;
             }
         }
         }
