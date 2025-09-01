@@ -208,7 +208,9 @@ small[data-err-flag="1"] {
   .form-group [type=password],
   .form-group [type=email],
   .form-group [type=number] {
-    font-size: 16px;
+    /*             font-size: 16px;
+     */
+    font-size: 20px;
     padding: 15px 15px;
   }
   .form-group label {
@@ -464,6 +466,17 @@ a.btn {
 .date-group .date-inputs select:invalid option {
   background: #ffffff;
 }
+.date-group .date-inputs .arrow::before {
+  content: "";
+  position: absolute;
+  transform: translateX(-20px) translateY(4px);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #888888;
+  pointer-events: none;
+}
 @media (max-width: 768px) {
   .date-group .date-inputs {
     height: 50.5px;
@@ -643,8 +656,8 @@ main .background-container .form-container {
     padding-top: 50vw;
     background-color: rgba(255, 255, 255, 0);
     border-radius: 0;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
     box-shadow: none;
   }
 }
@@ -830,7 +843,7 @@ main .background-container .form-container {
   gap: 3px;
 }
 #confirmLoanForm .form-address-row .address-group .address-box .postal-code-display .postal-label {
-  flex: 1;
+  flex: 1.2;
   color: #888888;
   font-size: 9px;
   font-weight: 400;
@@ -914,17 +927,6 @@ main .background-container .form-container {
   }
 }
 
-#stareLoanForm .arrow::before {
-  content: "";
-  position: absolute;
-  transform: translateX(-20px) translateY(2px);
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 8px solid #888888;
-  pointer-events: none;
-}
 @media (max-width: 768px) {
   #stareLoanForm .flex-reverse {
     flex-direction: column-reverse;
