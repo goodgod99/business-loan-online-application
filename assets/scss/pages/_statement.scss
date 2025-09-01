@@ -44,15 +44,22 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-            img {
-                width: 400%;
+
+                img {
+                    width: 400%;
+                }
             }
-        }
+
+            .button-group{
+                .btn{
+                    transform: scale(0.95);
+                }
+            }
         }
     }
 }
 
-.main-in-statement{
+.main-in-statement {
     @media (max-width: $mobile) {
         overflow: hidden;
     }

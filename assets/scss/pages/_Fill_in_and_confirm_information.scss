@@ -76,7 +76,9 @@
             }
 
             .companyPhone input {
-                font-size: 16px;
+                /*                 font-size: 16px;
+ */
+                font-size: 20px;
                 padding: 15px 15px;
             }
         }
@@ -127,10 +129,18 @@
                         border-color: $gray-dark;
                         background: $white;
                     }
+
                     @media (max-width: $mobile) {
-                        font-size: 16px;
+/*                         font-size: 16px;
+ */                        font-size: 18px;
+
                         padding: 15px 15px;
                     }
+                }
+
+                select{
+                    font-size: 18px;
+                    padding: 15px 25px 15px 15px;
                 }
 
                 //郵遞區號
@@ -180,7 +190,7 @@
                         }
 
                         .postal-number {
-                            font-size: 16px;
+                            font-size: 18px;
                         }
                     }
                 }
@@ -215,7 +225,7 @@
                         margin-top: 0px;
                         transform: translateY(80px) scale(0.9);
 
-                        label{
+                        label {
                             font-size: 15px;
                         }
                     }
@@ -239,7 +249,11 @@
 
         @media (max-width: $mobile) {
             flex-direction: column;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
+
+            &.more-margin-bottom {
+                margin-bottom: 45px;
+            }
 
             .address-group {
                 &:nth-child(1) {

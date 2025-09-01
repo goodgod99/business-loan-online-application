@@ -42,19 +42,24 @@
             background-size: contain;
             transition: opacity 0.3s ease;
         }
+
+        // 顯示密碼狀態
+        &.show-password::after {
+            background-image: url('../img/Button_Show.svg');
+        }
     }
 }
 
-.button-group{
+.button-group {
     .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    
-    .loading-icon {
-        width: 16px;
-        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        .loading-icon {
+            width: 16px;
+            height: 16px;
+        }
     }
-}
 }

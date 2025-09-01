@@ -22,66 +22,88 @@
             gap: 20px;
 
             input[type="file"] {
-                    width: 300px;
-                    height: 190px;
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
+                width: 300px;
+                height: 190px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                cursor: pointer;
+                transition: all 0.3s ease;
 
-                    // 隱藏原生 input file 的外觀
-                    appearance: none;
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    border: none;
-                    outline: none;
+                // 隱藏原生 input file 的外觀
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                border: none;
+                outline: none;
 
-                    // 隱藏檔案名稱文字
-                    color: transparent;
+                // 隱藏檔案名稱文字
+                color: transparent;
 
-                    // 隱藏 "選擇檔案" 按鈕
-                    &::-webkit-file-upload-button {
-                        display: none;
-                    }
-
-                    &::-moz-file-upload-button {
+                // 隱藏 "選擇檔案" 按鈕
+                &::-webkit-file-upload-button {
                     display: none;
                 }
-                }
 
-                .upload-area {
-                    width: 300px;
-                    height: 190px;
+                &::-moz-file-upload-button {
+                    display: none;
+                }
+            }
+
+            .upload-area {
+                width: 300px;
+                height: 190px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                                // 上傳進度狀態
+                &.uploading::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 20%;
+                    left: 50%;
+                    width: 50%;
+                    height: 10px;
+                    transform: translate(-50%, -50%);
+                    background-image: url('../img/loading.png');
                     background-size: contain;
                     background-repeat: no-repeat;
                     background-position: center;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-
                 }
 
-                .upload-area_1 {
-                    background-image: url('../img/Upload_ID_1.png');
+            }
 
-                    &:hover {
-                        background-image: url('../img/Upload_ID_1_hover.png');
+            .upload-area_1 {
+                position: relative;
+                background-image: url('../img/Upload_ID_1.png');
+
+                &:hover {
+                    background-image: url('../img/Upload_ID_1_hover.png');
+                }
+
+
+
+            }
+
+            .upload-area_2 {
+                background-image: url('../img/Upload_ID_2.png');
+
+                &:hover {
+                    background-image: url('../img/Upload_ID_2_hover.png');
+                }
+            }
+
+            @media(max-width: $mobile) {
+                flex-direction: column;
+                align-items: center;
+                .upload-area {
+                    &.uploading::after {
+                        bottom: 15%;
                     }
-                }
-
-                .upload-area_2 {
-                    background-image: url('../img/Upload_ID_2.png');
-
-                    &:hover {
-                        background-image: url('../img/Upload_ID_2_hover.png');
-                    }
-                }
-
-                @media(max-width: $mobile) {
-                    flex-direction: column;
-                    align-items: center;
-
                 }
             }
         }
     }
+}
