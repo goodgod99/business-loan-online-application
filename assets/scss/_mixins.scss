@@ -284,15 +284,14 @@ small[data-err-flag="1"] {
 
         .captcha-input {
             .captcha-image {
-                right: 70px;
-
-                height: 25px;
+                right: 75px;
+                height: 28px;
             }
 
             .captcha-refresh {
                 right: 5px;
-                top: 23px;
-                font-size: 16px;
+                top: 25px;
+                font-size: 18px;
             }
 
 
@@ -354,12 +353,12 @@ a.btn {
     }
 
     @media(max-width: $mobile) {
-/*         gap: 5px;
- */
+
         .btn {
             max-width: 170px;
             margin: 0;
             padding: 15px;
+            transform: scale(0.95);
         }
 
 
@@ -430,6 +429,9 @@ a.btn {
 /*             font-size: 16px;
  */            font-size: 20px;
             padding: 15px 40px 15px 15px;
+        }
+        &::after {
+            top: 40px;
         }
     }
 
@@ -504,7 +506,7 @@ a.btn {
 
 
         @media (max-width: $mobile) {
-            height: 50.5px;
+            height: 54.5px;
             font-size: 16px;
             padding: 15px 5px;
             select{

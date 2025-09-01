@@ -311,13 +311,13 @@ small[data-err-flag="1"] {
     max-width: none;
   }
   .captcha-section .captcha-input .captcha-image {
-    right: 70px;
-    height: 25px;
+    right: 75px;
+    height: 28px;
   }
   .captcha-section .captcha-input .captcha-refresh {
     right: 5px;
-    top: 23px;
-    font-size: 16px;
+    top: 25px;
+    font-size: 18px;
   }
 }
 
@@ -369,14 +369,11 @@ a.btn {
   background: #888888 !important;
 }
 @media (max-width: 768px) {
-  .button-group {
-    /*         gap: 5px;
-     */
-  }
   .button-group .btn {
     max-width: 170px;
     margin: 0;
     padding: 15px;
+    transform: scale(0.95);
   }
 }
 
@@ -432,6 +429,9 @@ a.btn {
     font-size: 20px;
     padding: 15px 40px 15px 15px;
   }
+  .custom-select::after {
+    top: 40px;
+  }
 }
 
 .date-group .date-inputs {
@@ -482,7 +482,7 @@ a.btn {
 }
 @media (max-width: 768px) {
   .date-group .date-inputs {
-    height: 50.5px;
+    height: 54.5px;
     font-size: 16px;
     padding: 15px 5px;
   }
@@ -735,7 +735,7 @@ main .background-container .form-container {
 }
 @media (max-width: 768px) {
   #confirmLoanForm .apply-amount::after {
-    top: 33px;
+    top: 35px;
     font-size: 15px;
   }
 }
@@ -934,7 +934,7 @@ main .background-container .form-container {
     margin-bottom: 20px;
   }
   #confirmLoanForm .form-address-row.more-margin-bottom {
-    margin-bottom: 45px;
+    margin-bottom: 55px;
   }
   #confirmLoanForm .form-address-row .address-group:nth-child(1) {
     width: 100%;
@@ -984,6 +984,11 @@ main .background-container .form-container {
     padding: 20px 10px;
     display: flex;
     flex-direction: column;
+    /*             .button-group{
+                    .btn{
+                        transform: scale(0.95);
+                    }
+                } */
   }
   #privacyModal .modal-content .modal-body {
     flex: 1;
@@ -994,9 +999,6 @@ main .background-container .form-container {
   }
   #privacyModal .modal-content .modal-body img {
     width: 400%;
-  }
-  #privacyModal .modal-content .button-group .btn {
-    transform: scale(0.95);
   }
 }
 
