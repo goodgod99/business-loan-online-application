@@ -47,6 +47,17 @@
         &.show-password::after {
             background-image: url('../img/Button_Show.svg');
         }
+
+        @media (max-width: $mobile) {
+            top: 28px;
+            width: 29px;
+            height: 29px;
+
+            &::after {
+                width: 25px;
+                height: 25px;
+            }
+        }
     }
 }
 

@@ -710,6 +710,17 @@ main .background-container .form-container {
 .form-group .password-toggle.show-password::after {
   background-image: url("../img/Button_Show.svg");
 }
+@media (max-width: 768px) {
+  .form-group .password-toggle {
+    top: 28px;
+    width: 29px;
+    height: 29px;
+  }
+  .form-group .password-toggle::after {
+    width: 25px;
+    height: 25px;
+  }
+}
 
 .button-group .btn {
   display: flex;
