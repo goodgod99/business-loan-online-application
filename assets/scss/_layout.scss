@@ -11,7 +11,7 @@ body {
     display: grid;
     // header(自動) main(剩餘空間) footer(自動)
     grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 
