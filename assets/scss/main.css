@@ -98,6 +98,11 @@ h1 {
   display: inline-block;
 }
 @media (max-width: 768px) {
+  .section-header {
+    height: 60px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
   .section-header h2 {
     color: #ffffff;
     font-size: 16px;
@@ -160,6 +165,8 @@ small[data-err-flag="1"] {
 @media (max-width: 768px) {
   .form-row {
     flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
   }
 }
 
@@ -953,10 +960,13 @@ main .background-container .form-container {
 @media (max-width: 768px) {
   #confirmLoanForm .form-address-row {
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
-  #confirmLoanForm .form-address-row.more-margin-bottom {
-    margin-bottom: 55px;
+  #confirmLoanForm .form-address-row.more-margin-bottom.first {
+    margin-bottom: 65px;
+  }
+  #confirmLoanForm .form-address-row.more-margin-bottom.second {
+    margin-bottom: 95px;
   }
   #confirmLoanForm .form-address-row .address-group:nth-child(1) {
     width: 100%;

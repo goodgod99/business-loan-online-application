@@ -48,6 +48,10 @@ h1 {
     }
 
     @media (max-width: $mobile) {
+        height: 60px;
+        margin-top: 60px;
+        margin-bottom: 30px;
+
         h2 {
             color: $white;
             font-size: 16px;
@@ -118,6 +122,9 @@ small[data-err-flag="1"] {
 
     @media (max-width: $mobile) {
         flex-direction: column;
+        gap: 30px;
+        margin-bottom: 30px;
+
     }
 }
 
@@ -314,7 +321,7 @@ small[data-err-flag="1"] {
     cursor: pointer;
     transition: all 0.3s ease;
     margin: auto;
-        margin-top: 40px;
+    margin-top: 40px;
 
     display: block;
     text-wrap: nowrap;
@@ -331,7 +338,7 @@ a.btn {
     text-decoration: none;
     box-sizing: border-box;
     margin: 0 auto;
-        margin-top: 40px;
+    margin-top: 40px;
 
 
 }
@@ -347,7 +354,7 @@ a.btn {
     .btn {
         display: inline-block;
         margin: 0;
-            margin-top: 20px;
+        margin-top: 20px;
 
     }
 
@@ -365,7 +372,7 @@ a.btn {
         .btn {
             flex: 1;
             margin: 0;
-                margin-top: 20px;
+            margin-top: 20px;
 
             padding: 15px;
             width: auto;

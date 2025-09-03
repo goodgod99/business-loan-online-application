@@ -141,7 +141,7 @@
 
                 @media (max-width: $mobile) {
                     select {
-                                                font-size: 18px;
+                        font-size: 18px;
 
                         padding: 15px 25px 15px 15px;
                     }
@@ -254,10 +254,14 @@
 
         @media (max-width: $mobile) {
             flex-direction: column;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
 
-            &.more-margin-bottom {
-                margin-bottom: 55px;
+            &.more-margin-bottom.first {//first
+                margin-bottom: 65px;
+            }
+
+            &.more-margin-bottom.second {//sec
+                margin-bottom: 95px;
             }
 
             .address-group {
