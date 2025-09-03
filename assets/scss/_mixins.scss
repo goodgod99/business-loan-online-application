@@ -165,8 +165,9 @@ small[data-err-flag="1"] {
         [type="password"],
         [type="email"],
         [type="number"] {
-/*             font-size: 16px;
- */            font-size: 20px;
+            /*             font-size: 16px;
+ */
+            font-size: 20px;
             padding: 15px 15px;
         }
 
@@ -228,6 +229,7 @@ small[data-err-flag="1"] {
     position: relative;
     margin: 0 auto;
     max-width: 450px;
+    margin-bottom: 20px;
 
 
 
@@ -282,6 +284,7 @@ small[data-err-flag="1"] {
     @media (max-width: $mobile) {
         margin: 0;
         max-width: none;
+        margin-bottom: 20px;
 
         .captcha-input {
             .captcha-image {
@@ -356,11 +359,22 @@ a.btn {
     @media(max-width: $mobile) {
 
         .btn {
-            max-width: 170px;
+            flex: 1;
             margin: 0;
             padding: 15px;
-            transform: scale(0.95);
+            width: auto;
+
+            // 第一個子元素
+            &:nth-child(1) {
+                margin-right: 20px;
+            }
+
+            // 第二個子元素
+            &:nth-child(2) {
+                margin-left: auto;
+            }
         }
+
 
 
     }
@@ -373,7 +387,7 @@ a.btn {
     position: relative;
     display: inline-block;
     width: 100%;
-    
+
 
     select {
         appearance: none;
@@ -404,7 +418,7 @@ a.btn {
             color: #333;
             background: $white;
             padding: 8px 12px;
-            
+
         }
     }
 
@@ -427,10 +441,12 @@ a.btn {
     @media (max-width: $mobile) {
 
         select {
-/*             font-size: 16px;
- */            font-size: 20px;
+            /*             font-size: 16px;
+ */
+            font-size: 20px;
             padding: 15px 40px 15px 15px;
         }
+
         &::after {
             top: 40px;
         }
@@ -489,8 +505,9 @@ a.btn {
 
         }
 
-            .arrow{
-                            // 自訂箭頭
+        .arrow {
+
+            // 自訂箭頭
             &::before {
                 content: '';
                 position: absolute;
@@ -503,17 +520,18 @@ a.btn {
                 border-top: 8px solid $gray-dark;
                 pointer-events: none;
             }
-    }
+        }
 
 
         @media (max-width: $mobile) {
             height: 54.5px;
             font-size: 16px;
             padding: 15px;
-            select{
+
+            select {
                 height: 30px;
                 font-size: 20px !important;
-                
+
             }
         }
     }

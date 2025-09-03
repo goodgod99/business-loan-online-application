@@ -210,7 +210,7 @@ small[data-err-flag="1"] {
   .form-group [type=email],
   .form-group [type=number] {
     /*             font-size: 16px;
-     */
+    */
     font-size: 20px;
     padding: 15px 15px;
   }
@@ -261,6 +261,7 @@ small[data-err-flag="1"] {
   position: relative;
   margin: 0 auto;
   max-width: 450px;
+  margin-bottom: 20px;
 }
 .captcha-section .captcha-input {
   position: relative;
@@ -310,6 +311,7 @@ small[data-err-flag="1"] {
   .captcha-section {
     margin: 0;
     max-width: none;
+    margin-bottom: 20px;
   }
   .captcha-section .captcha-input .captcha-image {
     right: 75px;
@@ -371,10 +373,16 @@ a.btn {
 }
 @media (max-width: 768px) {
   .button-group .btn {
-    max-width: 170px;
+    flex: 1;
     margin: 0;
     padding: 15px;
-    transform: scale(0.95);
+    width: auto;
+  }
+  .button-group .btn:nth-child(1) {
+    margin-right: 20px;
+  }
+  .button-group .btn:nth-child(2) {
+    margin-left: auto;
   }
 }
 
@@ -426,7 +434,7 @@ a.btn {
 @media (max-width: 768px) {
   .custom-select select {
     /*             font-size: 16px;
-     */
+    */
     font-size: 20px;
     padding: 15px 40px 15px 15px;
   }
@@ -998,11 +1006,6 @@ main .background-container .form-container {
     padding: 20px 10px;
     display: flex;
     flex-direction: column;
-    /*             .button-group{
-                    .btn{
-                        transform: scale(0.95);
-                    }
-                } */
   }
   #privacyModal .modal-content .modal-body {
     flex: 1;
@@ -1014,6 +1017,9 @@ main .background-container .form-container {
   #privacyModal .modal-content .modal-body img {
     width: 400%;
   }
+  #privacyModal .modal-content .button-group {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1022,6 +1028,9 @@ main .background-container .form-container {
   }
 }
 
+.id-card-upload {
+  margin-bottom: 20px;
+}
 .id-card-upload .example-images {
   width: 100%;
   height: 100px;
