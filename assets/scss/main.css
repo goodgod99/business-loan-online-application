@@ -261,7 +261,6 @@ small[data-err-flag="1"] {
   position: relative;
   margin: 0 auto;
   max-width: 450px;
-  margin-bottom: 20px;
 }
 .captcha-section .captcha-input {
   position: relative;
@@ -311,7 +310,6 @@ small[data-err-flag="1"] {
   .captcha-section {
     margin: 0;
     max-width: none;
-    margin-bottom: 20px;
   }
   .captcha-section .captcha-input .captcha-image {
     right: 75px;
@@ -336,6 +334,7 @@ small[data-err-flag="1"] {
   cursor: pointer;
   transition: all 0.3s ease;
   margin: auto;
+  margin-top: 40px;
   display: block;
   text-wrap: nowrap;
   background-origin: border-box;
@@ -350,12 +349,12 @@ a.btn {
   text-decoration: none;
   box-sizing: border-box;
   margin: 0 auto;
+  margin-top: 40px;
 }
 
 .button-group {
   display: flex;
   justify-content: space-around;
-  margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
   max-width: 540px;
@@ -363,6 +362,7 @@ a.btn {
 .button-group .btn {
   display: inline-block;
   margin: 0;
+  margin-top: 20px;
 }
 .button-group .gray-btn {
   background: #d9d9d9 !important;
@@ -375,6 +375,7 @@ a.btn {
   .button-group .btn {
     flex: 1;
     margin: 0;
+    margin-top: 20px;
     padding: 15px;
     width: auto;
   }
@@ -506,7 +507,6 @@ a.btn {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  margin-bottom: 20px;
 }
 .verification-fail-content .fail-illustration img {
   width: 150px;
@@ -1028,9 +1028,6 @@ main .background-container .form-container {
   }
 }
 
-.id-card-upload {
-  margin-bottom: 20px;
-}
 .id-card-upload .example-images {
   width: 100%;
   height: 100px;
