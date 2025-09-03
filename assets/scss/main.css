@@ -991,7 +991,7 @@ main .background-container .form-container {
   }
   #privacyModal .modal-content {
     width: 100%;
-    height: calc(100vh - 116px);
+    height: calc(100dvh - 116px);
     box-sizing: border-box;
     border-radius: 0;
     max-width: none;
