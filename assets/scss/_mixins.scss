@@ -557,6 +557,10 @@ a.btn {
     align-items: center;
     gap: 20px;
 
+    &.padding-left-right {
+        padding: 0 50px;
+    }
+
     .fail-illustration {
         img {
             width: 150px;
@@ -579,6 +583,10 @@ a.btn {
     @media (max-width: $mobile) {
         flex-direction: column;
         text-align: center;
+
+        &.padding-left-right {
+            padding: 0;
+        }
 
         .fail-illustration {
 

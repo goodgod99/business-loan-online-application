@@ -515,6 +515,9 @@ a.btn {
   align-items: center;
   gap: 20px;
 }
+.verification-fail-content.padding-left-right {
+  padding: 0 50px;
+}
 .verification-fail-content .fail-illustration img {
   width: 150px;
 }
@@ -531,6 +534,9 @@ a.btn {
   .verification-fail-content {
     flex-direction: column;
     text-align: center;
+  }
+  .verification-fail-content.padding-left-right {
+    padding: 0;
   }
   .verification-fail-content .fail-illustration {
     /* margin: 20px 0; */
