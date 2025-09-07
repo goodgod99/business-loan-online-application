@@ -120,6 +120,10 @@ small[data-err-flag="1"] {
     gap: 15px;
     margin-bottom: 20px;
 
+    &.no-gap {
+        gap: 0;
+    }
+
     @media (max-width: $mobile) {
         flex-direction: column;
         gap: 30px;
@@ -318,17 +322,22 @@ small[data-err-flag="1"] {
     border-radius: 25px;
     font-size: 16px;
     font-weight: 400;
+    line-height: unset;
     cursor: pointer;
     transition: all 0.3s ease;
     margin: auto;
-    margin-top: 40px;
-
+/*     margin-top: 40px;
+ */
     display: block;
     text-wrap: nowrap;
     background-origin: border-box;
 
     &:hover {
         background: $dark-red;
+    }
+
+    &.margin-top-30 {
+        margin-top: 30px;
     }
 }
 
@@ -338,8 +347,6 @@ a.btn {
     text-decoration: none;
     box-sizing: border-box;
     margin: 0 auto;
-    margin-top: 40px;
-
 
 }
 
@@ -354,9 +361,8 @@ a.btn {
     .btn {
         display: inline-block;
         margin: 0;
-        margin-top: 20px;
-
-    }
+/*         margin-top: 20px;
+ */    }
 
     .gray-btn {
         background: $gray-medium !important;
@@ -372,8 +378,6 @@ a.btn {
         .btn {
             flex: 1;
             margin: 0;
-            margin-top: 20px;
-
             padding: 15px;
             width: auto;
 

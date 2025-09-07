@@ -162,6 +162,9 @@ small[data-err-flag="1"] {
   gap: 15px;
   margin-bottom: 20px;
 }
+.form-row.no-gap {
+  gap: 0;
+}
 @media (max-width: 768px) {
   .form-row {
     flex-direction: column;
@@ -338,16 +341,21 @@ small[data-err-flag="1"] {
   border-radius: 25px;
   font-size: 16px;
   font-weight: 400;
+  line-height: unset;
   cursor: pointer;
   transition: all 0.3s ease;
   margin: auto;
-  margin-top: 40px;
+  /*     margin-top: 40px;
+   */
   display: block;
   text-wrap: nowrap;
   background-origin: border-box;
 }
 .btn:hover {
   background: #AC0108;
+}
+.btn.margin-top-30 {
+  margin-top: 30px;
 }
 
 a.btn {
@@ -356,7 +364,6 @@ a.btn {
   text-decoration: none;
   box-sizing: border-box;
   margin: 0 auto;
-  margin-top: 40px;
 }
 
 .button-group {
@@ -369,7 +376,8 @@ a.btn {
 .button-group .btn {
   display: inline-block;
   margin: 0;
-  margin-top: 20px;
+  /*         margin-top: 20px;
+   */
 }
 .button-group .gray-btn {
   background: #d9d9d9 !important;
@@ -382,7 +390,6 @@ a.btn {
   .button-group .btn {
     flex: 1;
     margin: 0;
-    margin-top: 20px;
     padding: 15px;
     width: auto;
   }
@@ -1029,6 +1036,7 @@ main .background-container .form-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
   }
   #privacyModal .modal-content .modal-body img {
     width: 400%;
