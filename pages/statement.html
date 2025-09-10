@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>個人資料保護之法定告知事項 - 台新銀行</title>
     <link rel="stylesheet" href="../assets/scss/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 </head>
 
 <body>
@@ -136,15 +137,15 @@
                             <div class="checkbox-section">
                                 <div class="checkbox-group">
                                     <input type="checkbox" id="agree1" name="agreements" required>
-                                    <label for="agree1">本人已閱讀並同意<a  class="link">GB2B全球數位企金網路服務條款</a></label>
+                                    <label for="agree1">本人已閱讀並同意<a class="link">GB2B全球數位企金網路服務條款</a></label>
                                 </div>
                                 <div class="checkbox-group">
                                     <input type="checkbox" id="agree2" name="agreements" required>
-                                    <label for="agree2">本人已閱讀並同意<a  class="link">申請企業貸款</a>的定事項</label>
+                                    <label for="agree2">本人已閱讀並同意<a class="link">申請企業貸款</a>的定事項</label>
                                 </div>
                                 <div class="checkbox-group">
                                     <input type="checkbox" id="agree3" name="agreements" required>
-                                    <label for="agree3">本人已閱讀並同意<a  class="link">個人資料保護法之法定公告事項</a></label>
+                                    <label for="agree3">本人已閱讀並同意<a class="link">個人資料保護法之法定公告事項</a></label>
                                 </div>
                             </div>
 
@@ -184,17 +185,11 @@
     <div id="privacyModal" class="modal">
         <div class="modal-content">
             <h1>個人資料保護之法定告知事項</h1>
-            <p class="form-subtitle">必須向下捲動看完條款，才能點擊同意 </p>
+            <p class="form-subtitle">必須向下捲動看完條款，才能點擊同意</p>
 
             <div class="modal-body">
-                <div class="pdf-viewer">
-                    <!-- <iframe src="../assets/pdf/privacy-policy.pdf" width="100%" height="400px">
-                                <p>您的瀏覽器不支援 PDF 顯示，請<a href="../assets/pdf/privacy-policy.pdf"
-                                        target="_blank">點擊這裡下載</a></p>
-                            </iframe> -->
-                    <img src="../assets/img/pdf.png" alt="pdf">
-                </div>
-
+                <iframe src="../assets/pdf/privacy-policy.pdf">
+                </iframe>
             </div>
             <div class="button-group">
                 <button type="button" class="btn gray-btn">返回</button>

@@ -1010,11 +1010,15 @@ main .background-container .form-container {
 #privacyModal .modal-content {
   background-color: white;
   border-radius: 12px;
-  max-width: 860px;
+  width: 860px;
   padding: 30px 0;
 }
-#privacyModal .modal-content .modal-body img {
+#privacyModal .modal-content .modal-body {
+  margin-bottom: 30px;
+}
+#privacyModal .modal-content .modal-body iframe {
   width: 100%;
+  height: 250px;
 }
 @media (max-width: 768px) {
   #privacyModal {
@@ -1025,7 +1029,6 @@ main .background-container .form-container {
     height: calc(100dvh - 116px);
     box-sizing: border-box;
     border-radius: 0;
-    max-width: none;
     padding: 20px 10px;
     display: flex;
     flex-direction: column;
@@ -1036,10 +1039,9 @@ main .background-container .form-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
   }
-  #privacyModal .modal-content .modal-body img {
-    width: 400%;
+  #privacyModal .modal-content .modal-body iframe {
+    height: 100%;
   }
   #privacyModal .modal-content .button-group {
     width: 100%;
