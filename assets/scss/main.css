@@ -357,6 +357,10 @@ small[data-err-flag="1"] {
 .btn.margin-top-30 {
   margin-top: 30px;
 }
+.btn.disable {
+  pointer-events: none !important;
+  opacity: 0.5 !important;
+}
 
 a.btn {
   display: flex;
@@ -544,9 +548,6 @@ a.btn {
   }
   .verification-fail-content.padding-left-right {
     padding: 0;
-  }
-  .verification-fail-content .fail-illustration {
-    /* margin: 20px 0; */
   }
   .verification-fail-content .fail-illustration img {
     width: 250px;
@@ -1017,24 +1018,17 @@ main .background-container .form-container {
   margin-bottom: 30px;
 }
 #privacyModal .modal-content .modal-body .pdf-viwer {
-  overflow-y: scroll;
-  padding-bottom: 1px;
-  /* 增加一點底部內距，以確保 modal-body 本身可以滾動 */
   height: 250px;
   width: 100%;
-  /* Hide scrollbar for IE, Edge and Firefox */
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
-  /* Hide scrollbar for Chrome, Safari and Opera */
+  border-top: 1px solid #EDEDED;
+  border-bottom: 1px solid #EDEDED;
+  overflow: scroll;
+  overflow-x: hidden;
 }
-#privacyModal .modal-content .modal-body .pdf-viwer::-webkit-scrollbar {
-  display: none;
-}
-#privacyModal .modal-content .modal-body .pdf-viwer iframe {
+#privacyModal .modal-content .modal-body .pdf-viwer canvas {
   width: 100%;
-  height: 100%;
+  height: auto;
+  display: block;
 }
 @media (max-width: 768px) {
   #privacyModal {
@@ -1057,9 +1051,6 @@ main .background-container .form-container {
     align-items: center;
   }
   #privacyModal .modal-content .modal-body .pdf-viwer {
-    height: 100%;
-  }
-  #privacyModal .modal-content .modal-body .pdf-viwer iframe {
     height: 100%;
   }
   #privacyModal .modal-content .button-group {

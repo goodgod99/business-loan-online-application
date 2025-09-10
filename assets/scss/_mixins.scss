@@ -339,6 +339,11 @@ small[data-err-flag="1"] {
     &.margin-top-30 {
         margin-top: 30px;
     }
+
+    &.disable{
+        pointer-events: none !important; 
+        opacity: 0.5 !important;
+    }
 }
 
 a.btn {
@@ -593,8 +598,6 @@ a.btn {
         }
 
         .fail-illustration {
-
-            /* margin: 20px 0; */
             img {
                 width: 250px;
             }
