@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     // 生成年份選項 (民國50-60年)
     const yearSelect = document.getElementById('birthYear');
-    yearSelect.innerHTML = '<option value="" disabled selected></option>';
+    yearSelect.innerHTML = `<option value="" disabled>年</option>
+                            <option value="" disabled selected></option>`;
 
     for (let year = 60; year >= 50; year--) {
         const option = document.createElement('option');
@@ -12,7 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 生成月份選項 (1-12月)
     const monthSelect = document.getElementById('birthMonth');
-    monthSelect.innerHTML = '<option value="" disabled selected></option>';
+    monthSelect.innerHTML = `<option value="" disabled>月</option>
+                            <option value="" disabled selected></option>`;
     for (let month = 1; month <= 12; month++) {
         const option = document.createElement('option');
         option.value = month.toString().padStart(2, '0');
@@ -22,7 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 生成日期選項 (1-31日)
     const daySelect = document.getElementById('birthDay');
-    daySelect.innerHTML = '<option value="" disabled selected></option>';
+    daySelect.innerHTML = `<option value="" disabled>日</option>
+                            <option value="" disabled selected></option>`;
     for (let day = 1; day <= 31; day++) {
         const option = document.createElement('option');
         option.value = day.toString().padStart(2, '0');
@@ -41,7 +44,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const daysInMonth = new Date(westernYear, month, 0).getDate();
 
             // 清空現有日期選項
-            daySelect.innerHTML = '<option value="" disabled selected></option>';
+            daySelect.innerHTML = `<option value="" disabled>日</option>
+                            <option value="" disabled selected></option>`;
 
             // 重新生成正確的日期選項
             for (let day = 1; day <= daysInMonth; day++) {
