@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>個人資料保護之法定告知事項 - 台新銀行</title>
     <link rel="stylesheet" href="../assets/scss/main.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 </head>
 
 <body>
@@ -188,12 +187,17 @@
             <p class="form-subtitle">必須向下捲動看完條款，才能點擊同意</p>
 
             <div class="modal-body">
-                <iframe src="../assets/pdf/privacy-policy.pdf">
+                <div class="pdf-viwer">
+                    <iframe
+                    src="../assets/pdf/privacy-policy.pdf#toolbar=0&navpanes=0&scrollbar=0&statusbar=0&messages=0&view=FitH">
+                    您的瀏覽器不支援內嵌框架。
                 </iframe>
+                </div>
             </div>
             <div class="button-group">
                 <button type="button" class="btn gray-btn">返回</button>
-                <a href="Index_Notification.html" class="btn ">同意</a>
+                <a href="Index_Notification.html" class="btn " id="agreeBtn"
+                    style="pointer-events: none; opacity: 0.5;">同意</a>
             </div>
         </div>
     </div>
@@ -201,7 +205,21 @@
     <!-- JavaScript -->
     <!--     <script src="../assets/js/date-picker.js"></script>
  -->
+    <script>
+        const modalBody = document.querySelector('.pdf-viwer');
+        const agreeBtn = document.getElementById('agreeBtn');
 
+        if (modalBody && agreeBtn) {
+            modalBody.addEventListener('scroll', function () {
+                // 檢查是否已滾動到底部 (scrollHeight - scrollTop === clientHeight)
+                // 增加 1px 的容錯值以應對可能的像素計算誤差
+                if (modalBody.scrollHeight - modalBody.scrollTop <= modalBody.clientHeight + 1) {
+                    agreeBtn.style.pointerEvents = 'auto';
+                    agreeBtn.style.opacity = '1';
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
