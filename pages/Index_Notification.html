@@ -61,6 +61,7 @@
                                 <div data-err-flag="1" class="date-inputs">
                                     <span>民國</span>
                                     <select id="birthYear" name="birthYear" required>
+                                        <option value="" disabled>年</option>
                                         <option value="" disabled selected></option>
                                         <option value="60">60</option>
                                         <option value="59">59</option>
@@ -74,9 +75,11 @@
                                         <option value="51">51</option>
                                         <option value="50">50</option>
                                     </select>
-                                    <span>年</span>
+                                    <span class="arrow">年</span>
                                     <select id="birthMonth" name="birthMonth" required>
+                                        <option value="" disabled>月</option>
                                         <option value="" disabled selected></option>
+
                                         <option value="1">01</option>
                                         <option value="2">02</option>
                                         <option value="3">03</option>
@@ -90,9 +93,11 @@
                                         <option value="11">11</option>
                                         <option value="12">12</option>
                                     </select>
-                                    <span>月</span>
+                                    <span class="arrow">月</span>
                                     <select id="birthDay" name="birthDay" required>
+                                        <option value="" disabled>日</option>
                                         <option value="" disabled selected></option>
+
                                         <option value="1">01</option>
                                         <option value="2">02</option>
                                         <option value="3">03</option>
@@ -125,7 +130,7 @@
                                         <option value="30">30</option>
                                         <option value="31">31</option>
                                     </select>
-                                    <span>日</span>
+                                    <span class="arrow">日</span>
                                 </div>
                                 <small data-err-flag="1" class="form-err-hint">請輸入正確生日</small>
                             </div>
