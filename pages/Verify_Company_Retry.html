@@ -36,7 +36,7 @@
                         <!-- 同意條款 -->
                         <div class="checkbox-section">
                             <div class="checkbox-group">
-                                <input type="checkbox" id="companyAgree" name="companyAgree" required>
+                                <input type="checkbox" id="companyAgree" name="agreements" required>
                                 <label for="companyAgree">
                                     本人已閱讀並同意<a
                                         class="link">企業授權書</a>(介接營業稅籍登記資料、欠稅資料、營業稅申報書資料、營業稅查定課徵核定資料、營利事業所得稅申報書資料、執行業務所得結算資料)，並已詳閱<a
@@ -70,9 +70,9 @@
                         <!-- 按鈕區域 -->
                         <div class="button-group">
                             <!--<button type="submit" class="btn">下一步</button>-->
-                            <a href="Verify_Company_fail.html" class="btn">下一步</a>
-                            <!--<button type="button" class="btn">專人聯絡</button>-->
-                            <a href="Verify_Company_fail.html" class="btn">專人聯絡</a>
+                            <a href="Verify_Company_fail.html" class="btn" name="next-btn">下一步</a>
+                            <button type="button" class="btn">專人聯絡</button>
+                            <!-- <a href="Verify_Company_fail.html" class="btn">專人聯絡</a> -->
                         </div>
 
                     </form>
@@ -93,7 +93,7 @@
         </div>
     </footer>
 
-    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/agreement-checkbox-control.js"></script>
 </body>
 
 </html>
