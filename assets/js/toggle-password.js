@@ -4,13 +4,12 @@ function togglePassword(inputId) {
 
     if (passwordInput.type === 'password') {
         passwordInput.type = 'text';
-        toggleButton.classList.add('show-password');
+        toggleButton.classList.toggle('show-password');
         toggleButton.setAttribute('aria-label', '隱藏密碼');
     } else {
         passwordInput.type = 'password';
-        toggleButton.classList.remove('show-password');
+        toggleButton.classList.toggle('show-password');
         toggleButton.setAttribute('aria-label', '顯示密碼');
     }
 
-    toggleButton.classList.toggle('show-password');
 }
