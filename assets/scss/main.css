@@ -490,12 +490,14 @@ a.btn {
   border: none;
   color: #888888;
   background: #ffffff;
-}
-.date-group .date-inputs select:invalid {
-  color: #EDEDED;
-}
-.date-group .date-inputs select:invalid option {
-  background: #ffffff;
+  /*             // 提示文字樣式
+              &:invalid {
+                  color: $gray-light;
+
+                  option {
+                      background: $white;
+                  }
+              } */
 }
 .date-group .date-inputs .arrow::before {
   content: "";
