@@ -908,7 +908,6 @@ main .background-container .form-container {
   font-weight: 400;
   transform: none;
   background-color: transparent;
-  pointer-events: none;
 }
 #confirmLoanForm .form-address-row .address-group .address-box .postal-code-display .postal-number {
   flex: 1;
