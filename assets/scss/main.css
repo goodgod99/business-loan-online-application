@@ -1109,8 +1109,9 @@ main .background-container .form-container {
 }
 .id-card-upload .upload-section .upload-row input[type=file].has-preview {
   border-radius: 10px;
-  border: 3px solid #ddd;
+  border: 2px solid #EDEDED;
   box-sizing: border-box;
+  border-style: dashed;
 }
 .id-card-upload .upload-section .upload-row .upload-area {
   width: 300px;

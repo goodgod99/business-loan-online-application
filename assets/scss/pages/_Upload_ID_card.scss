@@ -52,8 +52,9 @@
                 // 當有預覽圖時的狀態 (由 JS 加入 class)
                 &.has-preview {
                     border-radius: 10px; // 加點圓角比較好看
-                    border: 3px solid #ddd; // 選填：加上細邊框
+                    border: 2px solid #EDEDED; // 選填：加上細邊框
                     box-sizing: border-box;
+                    border-style: dashed;
                 }
             }
 
