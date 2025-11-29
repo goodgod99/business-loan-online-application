@@ -908,6 +908,7 @@ main .background-container .form-container {
   font-weight: 400;
   transform: none;
   background-color: transparent;
+  pointer-events: none;
 }
 #confirmLoanForm .form-address-row .address-group .address-box .postal-code-display .postal-number {
   flex: 1;
@@ -1088,7 +1089,7 @@ main .background-container .form-container {
 }
 .id-card-upload .upload-section .upload-row input[type=file] {
   width: 300px;
-  height: 190px;
+  height: 170px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -1107,6 +1108,11 @@ main .background-container .form-container {
 .id-card-upload .upload-section .upload-row input[type=file]::-moz-file-upload-button {
   display: none;
 }
+.id-card-upload .upload-section .upload-row input[type=file].has-preview {
+  border-radius: 10px;
+  border: 3px solid #ddd;
+  box-sizing: border-box;
+}
 .id-card-upload .upload-section .upload-row .upload-area {
   width: 300px;
   height: 190px;
@@ -1115,31 +1121,30 @@ main .background-container .form-container {
   background-position: center;
   cursor: pointer;
   transition: all 0.3s ease;
+  /*                 &.uploading::after {
+                      content: '';
+                      position: absolute;
+                      bottom: 20%;
+                      left: 50%;
+                      width: 50%;
+                      height: 10px;
+                      transform: translate(-50%, -50%);
+                      background-image: url('../img/loading.png');
+                      background-size: contain;
+                      background-repeat: no-repeat;
+                      background-position: center;
+                  } */
 }
-.id-card-upload .upload-section .upload-row .upload-area.uploading::after {
-  content: "";
-  position: absolute;
-  bottom: 20%;
-  left: 50%;
-  width: 50%;
-  height: 10px;
-  transform: translate(-50%, -50%);
-  background-image: url("../img/loading.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.id-card-upload .upload-section .upload-row .upload-area_1 {
-  position: relative;
+.id-card-upload .upload-section .upload-row .upload-area_1:not(.has-preview) {
   background-image: url("../img/Upload_ID_1.png");
 }
-.id-card-upload .upload-section .upload-row .upload-area_1:hover {
+.id-card-upload .upload-section .upload-row .upload-area_1:not(.has-preview):hover {
   background-image: url("../img/Upload_ID_1_hover.png");
 }
-.id-card-upload .upload-section .upload-row .upload-area_2 {
+.id-card-upload .upload-section .upload-row .upload-area_2:not(.has-preview) {
   background-image: url("../img/Upload_ID_2.png");
 }
-.id-card-upload .upload-section .upload-row .upload-area_2:hover {
+.id-card-upload .upload-section .upload-row .upload-area_2:not(.has-preview):hover {
   background-image: url("../img/Upload_ID_2_hover.png");
 }
 @media (max-width: 768px) {

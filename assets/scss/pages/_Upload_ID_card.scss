@@ -23,7 +23,7 @@
 
             input[type="file"] {
                 width: 300px;
-                height: 190px;
+                height: 170px;
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center;
@@ -48,6 +48,13 @@
                 &::-moz-file-upload-button {
                     display: none;
                 }
+
+                // 當有預覽圖時的狀態 (由 JS 加入 class)
+                &.has-preview {
+                    border-radius: 10px; // 加點圓角比較好看
+                    border: 3px solid #ddd; // 選填：加上細邊框
+                    box-sizing: border-box;
+                }
             }
 
             .upload-area {
@@ -59,7 +66,7 @@
                 cursor: pointer;
                 transition: all 0.3s ease;
                                 // 上傳進度狀態
-                &.uploading::after {
+/*                 &.uploading::after {
                     content: '';
                     position: absolute;
                     bottom: 20%;
@@ -71,27 +78,25 @@
                     background-size: contain;
                     background-repeat: no-repeat;
                     background-position: center;
-                }
+                } */
 
             }
 
             .upload-area_1 {
-                position: relative;
-                background-image: url('../img/Upload_ID_1.png');
-
-                &:hover {
-                    background-image: url('../img/Upload_ID_1_hover.png');
+                &:not(.has-preview) {
+                    background-image: url('../img/Upload_ID_1.png');
+                    &:hover {
+                        background-image: url('../img/Upload_ID_1_hover.png');
+                    }
                 }
-
-
-
             }
 
             .upload-area_2 {
-                background-image: url('../img/Upload_ID_2.png');
-
-                &:hover {
-                    background-image: url('../img/Upload_ID_2_hover.png');
+                &:not(.has-preview) {
+                    background-image: url('../img/Upload_ID_2.png');
+                    &:hover {
+                        background-image: url('../img/Upload_ID_2_hover.png');
+                    }
                 }
             }
 
