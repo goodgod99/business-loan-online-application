@@ -21,53 +21,100 @@
             margin-top: 20px;
             gap: 20px;
 
-            input[type="file"] {
+            .upload-box {
                 width: 300px;
                 height: 170px;
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                cursor: pointer;
-                transition: all 0.3s ease;
+                position: relative;
 
-                // 隱藏原生 input file 的外觀
-                appearance: none;
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                border: none;
-                outline: none;
+                input[type="file"] {
+                    width: 100%;
+                    height: 100%;
 
-                // 隱藏檔案名稱文字
-                color: transparent;
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
 
-                // 隱藏 "選擇檔案" 按鈕
-                &::-webkit-file-upload-button {
-                    display: none;
-                }
+                    // 隱藏原生 input file 的外觀
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    border: none;
+                    outline: none;
 
-                &::-moz-file-upload-button {
-                    display: none;
-                }
+                    // 隱藏檔案名稱文字
+                    color: transparent;
 
-                // 當有預覽圖時的狀態 (由 JS 加入 class)
-                &.has-preview {
+                    // 隱藏 "選擇檔案" 按鈕
+                    &::-webkit-file-upload-button {
+                        display: none;
+                    }
+
+                    &::-moz-file-upload-button {
+                        display: none;
+                    }
+
+                    // 當有預覽圖時的狀態 (由 JS 加入 class)
+                    /*                 &.has-preview {
                     border-radius: 10px; // 加點圓角比較好看
                     border: 2px solid #EDEDED; // 選填：加上細邊框
                     box-sizing: border-box;
                     border-style: dashed;
+                } */
                 }
+
+                .watermark {
+                    display: none;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .re_upload {
+                    display: none;
+                    position: absolute;
+                    top: 20px;
+                    left: 15px;
+                    background-image: url('../img/re_upload.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    cursor: pointer;
+                    width: 116px;
+                    height: 30px;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        background-image: url('../img/re_upload_hover.png');
+
+
+                    }
+
+                }
+
+                &.has-file {
+                    input[type="file"] {
+                        background-size: contain;
+                        transform: scale(95%);
+
+
+                    }
+
+                    .watermark,
+                    .re_upload {
+                        display: block; // 或 flex/absolute 依你的排版需求
+                    }
+                }
+
             }
 
+
             .upload-area {
-                width: 300px;
-                height: 190px;
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                cursor: pointer;
-                transition: all 0.3s ease;
-                                // 上傳進度狀態
-/*                 &.uploading::after {
+                // 上傳進度狀態
+                                &.uploading::after {
                     content: '';
                     position: absolute;
                     bottom: 20%;
@@ -79,13 +126,14 @@
                     background-size: contain;
                     background-repeat: no-repeat;
                     background-position: center;
-                } */
+                }
 
             }
 
             .upload-area_1 {
                 &:not(.has-preview) {
                     background-image: url('../img/Upload_ID_1.png');
+
                     &:hover {
                         background-image: url('../img/Upload_ID_1_hover.png');
                     }
@@ -95,6 +143,7 @@
             .upload-area_2 {
                 &:not(.has-preview) {
                     background-image: url('../img/Upload_ID_2.png');
+
                     &:hover {
                         background-image: url('../img/Upload_ID_2_hover.png');
                     }
@@ -104,10 +153,17 @@
             @media(max-width: $mobile) {
                 flex-direction: column;
                 align-items: center;
-                .upload-area {
-                    &.uploading::after {
-                        bottom: 15%;
+
+                .upload-box {
+                    width: 330px;
+                    height: 200px;
+
+                    .upload-area {
+                        &.uploading::after {
+                            bottom: 15%;
+                        }
                     }
+
                 }
             }
         }

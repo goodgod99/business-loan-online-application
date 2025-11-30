@@ -1086,10 +1086,15 @@ main .background-container .form-container {
   margin-top: 20px;
   gap: 20px;
 }
-.id-card-upload .upload-section .upload-row input[type=file] {
+.id-card-upload .upload-section .upload-row .upload-box {
   width: 300px;
   height: 170px;
-  background-size: contain;
+  position: relative;
+}
+.id-card-upload .upload-section .upload-row .upload-box input[type=file] {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -1100,40 +1105,64 @@ main .background-container .form-container {
   border: none;
   outline: none;
   color: transparent;
+  /*                 &.has-preview {
+      border-radius: 10px; // 加點圓角比較好看
+      border: 2px solid #EDEDED; // 選填：加上細邊框
+      box-sizing: border-box;
+      border-style: dashed;
+  } */
 }
-.id-card-upload .upload-section .upload-row input[type=file]::-webkit-file-upload-button {
+.id-card-upload .upload-section .upload-row .upload-box input[type=file]::-webkit-file-upload-button {
   display: none;
 }
-.id-card-upload .upload-section .upload-row input[type=file]::-moz-file-upload-button {
+.id-card-upload .upload-section .upload-row .upload-box input[type=file]::-moz-file-upload-button {
   display: none;
 }
-.id-card-upload .upload-section .upload-row input[type=file].has-preview {
-  border-radius: 10px;
-  border: 2px solid #EDEDED;
-  box-sizing: border-box;
-  border-style: dashed;
+.id-card-upload .upload-section .upload-row .upload-box .watermark {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
-.id-card-upload .upload-section .upload-row .upload-area {
-  width: 300px;
-  height: 190px;
+.id-card-upload .upload-section .upload-row .upload-box .re_upload {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  background-image: url("../img/re_upload.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  width: 116px;
+  height: 30px;
   transition: all 0.3s ease;
-  /*                 &.uploading::after {
-                      content: '';
-                      position: absolute;
-                      bottom: 20%;
-                      left: 50%;
-                      width: 50%;
-                      height: 10px;
-                      transform: translate(-50%, -50%);
-                      background-image: url('../img/loading.png');
-                      background-size: contain;
-                      background-repeat: no-repeat;
-                      background-position: center;
-                  } */
+}
+.id-card-upload .upload-section .upload-row .upload-box .re_upload:hover {
+  background-image: url("../img/re_upload_hover.png");
+}
+.id-card-upload .upload-section .upload-row .upload-box.has-file input[type=file] {
+  background-size: contain;
+  transform: scale(95%);
+}
+.id-card-upload .upload-section .upload-row .upload-box.has-file .watermark,
+.id-card-upload .upload-section .upload-row .upload-box.has-file .re_upload {
+  display: block;
+}
+.id-card-upload .upload-section .upload-row .upload-area.uploading::after {
+  content: "";
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  width: 50%;
+  height: 10px;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/loading.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .id-card-upload .upload-section .upload-row .upload-area_1:not(.has-preview) {
   background-image: url("../img/Upload_ID_1.png");
@@ -1152,7 +1181,11 @@ main .background-container .form-container {
     flex-direction: column;
     align-items: center;
   }
-  .id-card-upload .upload-section .upload-row .upload-area.uploading::after {
+  .id-card-upload .upload-section .upload-row .upload-box {
+    width: 330px;
+    height: 200px;
+  }
+  .id-card-upload .upload-section .upload-row .upload-box .upload-area.uploading::after {
     bottom: 15%;
   }
 }

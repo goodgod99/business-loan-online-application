@@ -1,57 +1,44 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // 選取所有的上傳 input
     const inputs = document.querySelectorAll('input[type="file"]');
 
     inputs.forEach(input => {
         input.addEventListener('change', function (e) {
             const file = e.target.files[0];
-            if (!file) return;
+            // 找到外層的容器 (用來控制 watermark 和 re_upload 的顯示)
+            const uploadBox = input.closest('.upload-box');
 
-            const reader = new FileReader();
-            reader.onload = function (event) {
-                const img = new Image();
-                img.onload = function () {
-                    const canvas = document.createElement('canvas');
-                    const ctx = canvas.getContext('2d');
+            if (file) {
+                // ★ 新增：有檔案時，對父層加上 class 來顯示浮水印與按鈕
+                if (uploadBox) {
+                    uploadBox.classList.add('has-file');
+                }
 
-                    // 1. 設定 Canvas 大小
-                    canvas.width = img.width;
-                    canvas.height = img.height;
+                const reader = new FileReader();
 
-                    // 2. 畫上原圖
-                    ctx.drawImage(img, 0, 0);
+                reader.onload = function (e) {
+                    // 1. 將背景圖改為讀取到的圖片
+                    input.style.backgroundImage = `url(${e.target.result})`;
 
-                    // 3. 設定浮水印樣式
-                    // 字體大小設為圖片寬度的 6% (可自行調整)
-                    // 確保字體夠大且明顯
-                    const fontSize = Math.floor(canvas.width * 0.07);
-                    ctx.font = `bold ${fontSize}px Arial`;
-                    ctx.fillStyle = "#A5A5A5"; // 白色半透明
-                    ctx.textAlign = "center";   // 水平置中
-                    ctx.textBaseline = "middle"; // 垂直置中
-
-                    // 4. 繪製單一傾斜浮水印
-                    ctx.save(); // 儲存狀態
-
-                    // 移動原點到圖片正中心
-                    ctx.translate(canvas.width / 2, canvas.height*3 / 5);
-
-                    // 旋轉 -6 度 (逆時針)
-                    ctx.rotate(-6 * Math.PI / 180);
-
-                    // 在原點 (即圖片中心) 畫出文字
-                    ctx.fillText("僅供台新銀行辦理業務使用", 0, 0);
-
-                    ctx.restore(); // 恢復狀態
-
-                    // 5. 輸出結果
-                    const watermarkedUrl = canvas.toDataURL('image/jpeg', 0.8);
-                    input.style.backgroundImage = `url(${watermarkedUrl})`;
+                    // 2. 加上 class 以調整 CSS (例如改成 background-size: cover)
                     input.classList.add('has-preview');
-                };
 
-                img.src = event.target.result;
-            };
-            reader.readAsDataURL(file);
+                    // (選填) 移除 loading 狀態
+                    input.classList.remove('uploading');
+                }
+
+                // (選填) 加上 loading 效果
+                input.classList.add('uploading');
+
+                reader.readAsDataURL(file);
+            } /* else {
+                // ★ 新增：如果使用者按了取消 (沒有檔案)，要復原狀態
+                if (uploadBox) {
+                    uploadBox.classList.remove('has-file');
+                }
+                input.style.backgroundImage = ''; // 清除背景圖
+                input.classList.remove('has-preview');
+            } */
         });
     });
 });
