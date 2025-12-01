@@ -9,7 +9,29 @@ document.addEventListener('DOMContentLoaded', function () {
             const uploadBox = input.closest('.upload-box');
 
             if (file) {
-                // ★ 新增：有檔案時，對父層加上 class 來顯示浮水印與按鈕
+                // ★ 新增檢查邏輯：判斷檔案類型
+                const validTypes = ['image/jpeg', 'image/png', 'image/jpg']; // jpg 有時也是 image/jpeg，但有些瀏覽器/OS可能會不同，多寫保險
+
+                if (!validTypes.includes(file.type)) {
+                    alert('檔案格式錯誤！請僅上傳 JPG 或 PNG 格式的圖片。');
+
+                    // 清空錯誤的檔案，讓 input 回復未選擇狀態
+                    input.value = '';
+
+                    // 確保 UI 狀態復原 (移除預覽圖、移除浮水印顯示class)
+                    if (uploadBox) {
+                        uploadBox.classList.remove('has-file');
+                    }
+                    input.style.backgroundImage = '';
+                    input.classList.remove('has-preview');
+                    input.classList.remove('uploading'); // 確保 loading 狀態也被移除
+
+                    return; // ★ 重要：直接結束函式，不執行後面的 FileReader
+                }
+
+                // --- 通過檢查，執行原本的上傳預覽邏輯 ---
+
+                // 有檔案時，對父層加上 class 來顯示浮水印與按鈕
                 if (uploadBox) {
                     uploadBox.classList.add('has-file');
                 }
@@ -31,14 +53,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 input.classList.add('uploading');
 
                 reader.readAsDataURL(file);
-            } /* else {
+            } else {
                 // ★ 新增：如果使用者按了取消 (沒有檔案)，要復原狀態
                 if (uploadBox) {
                     uploadBox.classList.remove('has-file');
                 }
                 input.style.backgroundImage = ''; // 清除背景圖
                 input.classList.remove('has-preview');
-            } */
+            }
         });
     });
 });
